@@ -7,7 +7,18 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'monument-extended': ['Monument Extended', 'sans-serif'],
+      },
+      fontWeight: {
+        ultrabold: '900',
+      },
+      colors: {
+        'bg': '#2A2929',
+        'red': '#FF0000',
+      }
+    },
   },
   plugins: [],
 } satisfies Config;

@@ -1,9 +1,17 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-body {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: 'Monument Extended';
+  src: url('/Fonts/MonumentExtended-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Monument Extended';
+  src: url('/Fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
