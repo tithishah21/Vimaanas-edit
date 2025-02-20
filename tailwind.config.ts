@@ -17,7 +17,11 @@ export default {
       colors: {
         'bg': '#2A2929',
         'red': '#FF0000',
-      }
+        'cardcolor':'#D1D1CE',
+      },
+      gridTemplateColumns: {
+        '14': 'repeat(14, minmax(0, 1fr))',
+      },
     },
   },
   plugins: [],

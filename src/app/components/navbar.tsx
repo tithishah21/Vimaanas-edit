@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
+import ConnectButton from './buttons/ConnectButton';
+import NavbarButton from './buttons/NavbarButton';
 
 export const Navbar = () => {
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
@@ -73,99 +75,57 @@ export const Navbar = () => {
     }
   };
 
-  const getButtonStyles = (sectionId: string) => {
-    const baseStyles = "transition-all duration-300 ease-in-out";
-    return `${
-      selectedSection === sectionId
-        ? "border-red text-red"
-        : "border-white text-white hover:border-red hover:text-red"
-    } ${baseStyles}`;
-  };
-
   return (
     <header className="bg-bg text-white sticky top-0 z-50 font-monument-extended font-ultrabold overflow-x-hidden">
       <nav className="w-full mx-auto px-3 py-2 sm:py-3 lg:py-4">
-        {/* Mobile Navigation */}
         <div className="flex justify-between items-center md:hidden">
-          <button 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white p-1.5 focus:outline-none shrink-0"
-            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          >
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white p-1.5 focus:outline-none shrink-0">
             {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
 
           <div className="flex items-center justify-center space-x-1.5 shrink-0">
-            <Image
-              src="/assets/logo.png"
-              alt="Logo"
-              width={32}
-              height={38}
-              className="w-7 h-auto"
-              priority
-            />
-            <Link href="/" className="text-xs sm:text-sm text-red tracking-wider">
-              VIMAANAS
-            </Link>
+            <Image src="/assets/logo.png" alt="Logo" width={32} height={38} className="w-7 h-auto" priority />
+            <Link href="/" className="text-lg sm:text-base text-red tracking-wider">VIMAANAS</Link>
           </div>
 
-          <button 
-            onClick={() => scrollToSection('contact')} 
-            className="bg-red text-white border border-white rounded-full px-2 py-1 text-[10px] sm:text-xs tracking-wider whitespace-nowrap hover:bg-red-700 transition-colors duration-300 shrink-0"
-          >
-            Connect
-          </button>
+          <ConnectButton onClick={() => scrollToSection('contact')} size="sm" text="Connect" />
         </div>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex justify-between items-center">
           <div className="flex items-center space-x-2 shrink-0">
-            <Image
-              src="/assets/logo.png"
-              alt="Logo"
-              width={50}
-              height={60}
-              className="w-10 lg:w-12 h-auto"
-              priority
-            />
-            <Link href="/" className="text-base lg:text-lg text-red tracking-wider">
-              VIMAANAS
-            </Link>
+            <Image src="/assets/logo.png" alt="Logo" width={50} height={60} className="w-10 lg:w-12 h-auto" priority />
+            <Link href="/" className="text-xl sm:text-2xl lg:text-3xl text-red tracking-wider">VIMAANAS</Link>
+
           </div>
 
           <div className="flex space-x-1.5 lg:space-x-3 px-2 overflow-x-auto">
             {navSections.map((section) => (
-              <button
+              <NavbarButton
                 key={section}
                 onClick={() => scrollToSection(section)}
-                className={`${getButtonStyles(section)} border rounded-full px-2 lg:px-4 py-2 lg:py-3 text-xs lg:text-sm tracking-wider capitalize whitespace-nowrap shrink-0`}
+                isSelected={selectedSection === section}
               >
                 {section === 'about' ? 'About Team' : section}
-              </button>
+              </NavbarButton>
             ))}
           </div>
 
-          <button 
-            onClick={() => scrollToSection('contact')} 
-            className="bg-red text-white border border-white rounded-full px-3 lg:px-6 py-2 lg:py-3 text-xs lg:text-sm tracking-wider hover:bg-red-700 transition-colors duration-300 shrink-0"
-          >
-            Connect Us
-          </button>
+          <ConnectButton onClick={() => scrollToSection('contact')} size="lg" />
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-[#2A2929] z-40 mt-[3.5rem] sm:mt-[4rem]">
           <div className="flex flex-col items-center space-y-4 p-6 pt-10">
             {navSections.map((section) => (
-              <button
+              <NavbarButton
                 key={section}
                 onClick={() => scrollToSection(section)}
-                className={`${getButtonStyles(section)} w-full max-w-sm border rounded-full px-4 py-2 text-sm tracking-wider capitalize text-center`}
+                isSelected={selectedSection === section}
+                className="w-full max-w-sm text-center"
               >
                 {section === 'about' ? 'About Team' : section}
-              </button>
+              </NavbarButton>
             ))}
           </div>
         </div>
