@@ -1,10 +1,10 @@
 "use client";
 
-import { Navbar } from './components/navbar';
-import { Gallery } from './components/gallery';
-import { Projects } from './components/projects';
-import { Achievements } from './components/achievements';
-import { Contact } from './components/contact';
+import { Navbar } from './components/Navbar/navbar';
+import { Gallery } from './components/gallery/gallery';
+import { Projects } from './components/projects/projects';
+import { Achievements } from './components/achievements/achievements';
+import { Contact } from './components/contact/contact';
 import { LandingPage } from './components/LandingPage/landingpage';
 
 export default function Home() {

@@ -4,8 +4,8 @@ import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import ConnectButton from "./buttons/ConnectButton";
-import NavbarButton from "./buttons/NavbarButton";
+import ConnectButton from "../buttons/ConnectButton";
+import NavbarButton from "../buttons/NavbarButton";
 
 export const Navbar = () => {
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
