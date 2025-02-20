@@ -28,7 +28,7 @@ export const ConnectButton = ({
         rounded-full 
         tracking-wider 
         whitespace-nowrap 
-        hover:bg-red-700 
+        hover:bg-red
         transition-colors 
         duration-300 
         shrink-0
