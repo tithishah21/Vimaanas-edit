@@ -10,7 +10,6 @@ import { LandingPage } from './components/LandingPage/landingpage';
 export default function Home() {
   return (
     <>
-      <Navbar />
       <LandingPage />
       <Gallery />
       <Projects />
