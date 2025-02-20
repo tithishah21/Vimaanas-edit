@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
@@ -11,7 +11,8 @@ export const Navbar = () => {
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navSections = ["about", "gallery", "projects", "achievements"];
+  // Use useMemo to prevent unnecessary re-renders
+  const navSections = useMemo(() => ["about", "gallery", "projects", "achievements"], []);
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
