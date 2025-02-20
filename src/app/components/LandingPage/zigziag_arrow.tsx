@@ -1,10 +1,24 @@
 "use client";
 
 import Image from "next/image";
-import { useMediaQuery } from "react-responsive";
+import { useState, useEffect } from "react";
 
 const ZigZagArrow = ({ className }: { className?: string }) => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const checkIfMobile = () => {
+        setIsMobile(window.innerWidth <= 767);
+      };
+      
+      checkIfMobile();
+      
+      window.addEventListener("resize", checkIfMobile);
+      
+      return () => window.removeEventListener("resize", checkIfMobile);
+    }
+  }, []);
 
   return (
     <Image 
