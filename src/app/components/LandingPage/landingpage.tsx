@@ -5,32 +5,42 @@ import ConnectButton from "../buttons/ConnectButton";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import Plane from "./plane";
+import UturnArrow from "./uturn_arrow";
+import ZigZagArrow from "./zigziag_arrow";
 
 export const LandingPage = () => {
-  // Add specific breakpoints for different device sizes
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
-  
+  const marginTop = isMobile ? "mt-[6vh]" : isTablet ? "mt-[10vh]" : isDesktop ? "mt-[16vh]" : "mt-[15vh]";
   return (
     <section 
       id="landing" 
       className="h-screen w-full relative bg-bg text-white overflow-hidden flex flex-col items-center justify-center"
     >
       {/* Plane positioning with specific tablet adjustments */}
-      <div className={`absolute z-[1] ${
-        isMobile ? "right-[4.5vw] top-[39.5%] transform -translate-y-1/2" :
-        isTablet ? "right-[13vw] top-[41%] transform -translate-y-1/2 scale-90" :
-        "right-[10vw] top-[30%] transform -translate-y-1/2"
-      }`}>
+      <div
+        className={`absolute z-[1] ${
+          isMobile ? "right-[4.5vw] top-[35.5%] transform -translate-y-1/2" :
+          isTablet ? "right-[13vw] top-[37%] transform -translate-y-1/2 scale-90" :
+          "right-[10vw] top-[26%] transform -translate-y-1/2"
+        } flex flex-col items-center space-y-[1vh]`}
+      >
+        <UturnArrow />
         <Plane />
       </div>
-      <div className={`absolute z-[1] ${
-        isMobile ? "left-[4.5vw] top-[39.5%] transform -translate-y-1/2 scale-x-[-1]" :
-        isTablet ? "left-[13vw] top-[41%] transform -translate-y-1/2 scale-90 scale-x-[-1]" :
-        "left-[10vw] top-[30%] transform -translate-y-1/2 scale-x-[-1]"
-      }`}>
+      <div
+        className={`absolute z-[1] ${
+          isMobile
+            ? "left-[4.5vw] top-[42.5%] transform -translate-y-1/2 scale-x-[-1]"
+            : isTablet
+            ? "left-[13vw] top-[45%] transform -translate-y-1/2 scale-90 scale-x-[-1]"
+            : "left-[10vw] top-[40%] transform -translate-y-1/2 scale-x-[-1]"
+        } flex flex-col items-center`}
+      >
         <Plane />
+        <ZigZagArrow className={`${marginTop} scale-x-[-1]`} />
+
       </div>
       {/* Responsive Grid - Adjusted for different viewports */}
       <div className="absolute inset-0 px-4 sm:px-8 md:px-12 lg:px-20">

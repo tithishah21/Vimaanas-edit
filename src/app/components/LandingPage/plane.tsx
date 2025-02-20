@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 
-const Plane = () => {
+const Plane = ({ className }: { className?: string }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   return (
@@ -14,7 +14,7 @@ const Plane = () => {
       height={isMobile ? 50 : 100}
       className={`opacity-70 transform rotate-12 ${
         isMobile ? "w-[50px] h-[50px]" : "w-[10vw] h-auto max-w-[200px] min-w-[80px]"
-      }`}
+      } ${className}`}
       priority 
     />
   );
