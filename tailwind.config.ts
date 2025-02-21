@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 export default {
   content: [
@@ -17,12 +18,22 @@ export default {
       colors: {
         'bg': '#2A2929',
         'red': '#FF0000',
-        'cardcolor':'#D1D1CE',
+        'cardcolor': '#D1D1CE',
       },
       gridTemplateColumns: {
         '14': 'repeat(14, minmax(0, 1fr))',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function({ addUtilities }) {
+      const newUtilities = {
+        '.text-stroke': {
+          '-webkit-text-stroke': '4px #D2D2D2',  
+          'color': '#FFFFFF',                    
+        },
+      };
+      addUtilities(newUtilities,);
+    }),
+  ],
 } satisfies Config;
