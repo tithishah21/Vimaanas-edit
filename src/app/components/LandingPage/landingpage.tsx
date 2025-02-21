@@ -6,6 +6,7 @@ import Image from "next/image";
 import Plane from "./components/plane";
 import UturnArrow from "./components/uturn_arrow";
 import ZigZagArrow from "./components/zigziag_arrow";
+import ProfileCard from "./components/profilecard";
 
 export const LandingPage = () => {
   return (
@@ -21,19 +22,41 @@ export const LandingPage = () => {
         <UturnArrow />
         <Plane />
       </div>
-
       <div
-        className="absolute z-[1] left-[4.5vw] md:left-[13vw] lg:left-[10vw] top-[42.5%] md:top-[45%] lg:top-[40%]
+        className="md:flex absolute z-[100] top-[32.5%] md:top-[35%] lg:top-[20%] right-[13%] md:right-[22%] lg:right-[21%]
+        transform -translate-y-1/2 flex-col items-center space-y-4 rotate-[20deg]
+        scale-[0.6] md:scale-[0.75] lg:scale-100"
+      >
+        <ProfileCard  
+          imageUrl={"/assets/team/krish.png"}
+          name="Krish"
+          role="CAPTAIN"
+          values={["Innovate","Fly","Conquer"]}
+        />
+      </div>
+      <div
+        className="absolute z-[1] left-[4.5vw] md:left-[10vw] lg:left-[10vw] top-[42.5%] md:top-[45%] lg:top-[40%]
         transform -translate-y-1/2 scale-x-[-1] flex flex-col items-center"
       >
         <Plane />
         <ZigZagArrow className="mt-16 scale-x-[-1]" />
       </div>
+      <div
+        className="md:flex absolute z-[100] bottom-[30.5%] md:bottom-[25.5%] lg:bottom-[10%] left-[13%] md:left-[22%] lg:left-[21%]
+        transform -translate-y-1/2 flex-col items-center space-y-4 rotate-[-18deg]
+        scale-[0.6] md:scale-[0.75] lg:scale-100"
+      >
+        <ProfileCard  
+          imageUrl={"/assets/team/krish.png"}
+          name="Krish"
+          role="CAPTAIN"
+          values={["Innovate","Fly","Conquer"]}
+        />
+      </div>
 
       {/* Grid Background - responsive grid system */}
       <div className="absolute inset-0 px-4 sm:px-8 md:px-12 lg:px-20">
         <div className="w-full h-full grid grid-cols-6 grid-rows-6 md:grid-cols-10 md:grid-rows-10 lg:grid-cols-14 lg:grid-rows-14">
-          {/* Generate grid cells dynamically based on breakpoint */}
           {Array.from({ length: 196 }).map((_, i) => (
             <div 
               key={i} 

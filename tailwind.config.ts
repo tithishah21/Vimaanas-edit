@@ -11,6 +11,7 @@ export default {
     extend: {
       fontFamily: {
         'monument-extended': ['Monument Extended', 'sans-serif'],
+        'sf-pro-display': ['SF Pro Display', 'sans-serif'],
       },
       fontWeight: {
         ultrabold: '900',
