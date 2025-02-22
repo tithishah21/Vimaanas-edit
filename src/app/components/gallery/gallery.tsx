@@ -1,7 +1,19 @@
+import UturnArrow from "../LandingPage/components/uturn_arrow";
+import Plane from "../LandingPage/components/plane";
+import ZigZagArrow from "../LandingPage/components/zigziag_arrow";
 
 export const Gallery = () => {
     return (
       <section id="gallery" className="h-screen w-full rounded-t-2xl relative bg-[#FFFFFF] text-white overflow-hidden flex flex-col items-center justify-center">
+
+        <div className="absolute left-[2vw] top-[32%] rotate-[250deg] filter grayscale brightness-[0.42] contrast-[1.2]">
+          <UturnArrow />
+        </div>
+
+        <div className="absolute left-[45vw] top-[62%] rotate-[360deg] filter grayscale brightness-0">
+          <ZigZagArrow />
+        </div>
+
         <div className="relative w-fit">
           <div className="text-stroke relative font-monument-extended font-ultrabold text-9xl tracking-widest">
             WHO ARE WE?
