@@ -2,9 +2,9 @@ import UturnArrow from "../LandingPage/components/uturn_arrow";
 import Plane from "../LandingPage/components/plane";
 import ZigZagArrow from "../LandingPage/components/zigziag_arrow";
 
-export const Gallery = () => {
+export const AboutTeam = () => {
     return (
-      <section id="gallery" className="h-screen w-full rounded-t-2xl relative bg-[#FFFFFF] text-white overflow-hidden flex flex-col items-center justify-center">
+      <section id="about" className="h-screen w-full rounded-t-2xl relative bg-[#FFFFFF] text-white overflow-hidden flex flex-col items-center justify-center">
 
         <div className="absolute left-[2vw] top-[32%] rotate-[250deg] filter grayscale brightness-[0.42] contrast-[1.2]">
           <UturnArrow />
