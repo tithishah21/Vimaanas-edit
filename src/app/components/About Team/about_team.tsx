@@ -4,8 +4,7 @@ import ZigZagArrow from "../LandingPage/components/zigziag_arrow";
 
 export const AboutTeam = () => {
     return (
-      <section id="about" className="h-screen w-full rounded-t-2xl relative bg-[#FFFFFF] text-white overflow-hidden flex flex-col items-center justify-center">
-
+      <section id="about" className="h-screen w-full rounded-t-2xl relative bg-[#FFFFFF] text-white flex flex-col items-center justify-center">
         <div className="absolute left-[2vw] top-[32%] rotate-[250deg] filter grayscale brightness-[0.42] contrast-[1.2]">
           <UturnArrow />
         </div>
@@ -14,15 +13,23 @@ export const AboutTeam = () => {
           <ZigZagArrow />
         </div>
 
-        <div className="relative w-fit">
-          <div className="text-stroke relative font-monument-extended font-ultrabold text-9xl tracking-widest">
+        <div className="relative w-full flex justify-center items-center">
+
+          <div className="absolute top-[70%] left-[33%] -translate-x-1/2 -translate-y-1/2 rotate-[85deg] blur-sm opacity-99 z-10">
+            <Plane />
+          </div>
+
+          <div className="text-stroke relative font-monument-extended font-ultrabold text-9xl tracking-widest z-0">
             WHO ARE WE?
           </div>
-          <div className="absolute flex font-monument-extended font-ultrabold text-6xl tracking-widest top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-5">
-            <div className="text-[#FF0000] ">ABOUT</div> 
+
+          <div className="absolute flex font-monument-extended font-ultrabold text-6xl tracking-widest top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-5 z-20">
+            <div className="text-[#FF0000]">ABOUT</div>
             <div className="text-[#000000]">TEAM</div>
           </div>
         </div>
+
+
         <div className="flex h-[30vw] w-screen justify-center gap-28 mt-20">
           <div className="h-[30vw] w-[40vw] bg-[#F5F5F5] rounded-3xl border-4 border-[#F5F5F5] flex flex-col justify-center align-middle text-center">
             <div className="text-[#000000] font-monument-extended font-ultrabold text-5xl mt-3">WHO ARE</div>
@@ -58,6 +65,10 @@ export const AboutTeam = () => {
             competitive settings.
             </div>
           </div>
+          <div className="absolute bottom-[30vw] left-[87%] rotate-[350deg] blur-sm opacity-95 z-10">
+            <Plane />
+          </div>
+          
         </div>
       </section>
 
