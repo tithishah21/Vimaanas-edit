@@ -39,7 +39,7 @@ export const AboutTeam = () => {
  
   
 
-  <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw]">
+  <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 sm:ml-0">
 <div className="absolute inset-0 bg-pink-500 rounded-3xl blur-lg opacity-50"></div>
 <StandardWobbleCard
         title="WHO ARE"
@@ -49,7 +49,7 @@ export const AboutTeam = () => {
 </div>
 
 
-<div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw]">
+<div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 sm:ml-0 mt-4 sm:mt-0">
 <div className="absolute inset-0 bg-pink-500 rounded-3xl blur-lg opacity-50"></div>
 
       

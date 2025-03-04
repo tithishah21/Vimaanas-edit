@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import ConnectButton from "../buttons/ConnectButton";
 import CircularGallery from "./CircularGallery";
 
