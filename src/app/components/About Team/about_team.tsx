@@ -1,6 +1,7 @@
 import UturnArrow from "../LandingPage/components/uturn_arrow";
 import Plane from "../LandingPage/components/plane";
 import ZigZagArrow from "../LandingPage/components/zigziag_arrow";
+import ExploreAboutTeamButton from "../buttons/ExploreAboutTeamButton";
 
 export const AboutTeam = () => {
     return (
@@ -35,7 +36,8 @@ export const AboutTeam = () => {
 
   <div className="lg:flex w-screen justify-center gap-28 mt-10 lg:mt-20 relative z-20 ml-10 md:ml-20 lg:ml-0">
  
-    <div className="h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] bg-[#F5F5F5] rounded-3xl border-4 border-[#F5F5F5] flex flex-col justify-center items-center text-center p-6">
+    <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] bg-[#F5F5F5] rounded-3xl border-4 border-[#F5F5F5] flex flex-col justify-center items-center text-center p-6 
+      before:content-[''] before:absolute before:inset-0 before:-z-10 before:blur-[30px] before:bg-[#FF0000]/20">
       <div className="text-[#000000] font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl mt-3">
         WHO ARE
       </div>
@@ -57,36 +59,40 @@ export const AboutTeam = () => {
       </div>
     </div>
 
-    <div className="absolute block md:block lg:hidden left-0 top-[50%] -translate-y-1/2 rotate-[80deg] z-10">
-      <Plane />
+  <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] bg-[#F5F5F5] rounded-3xl border-4 border-[#F5F5F5] flex flex-col justify-center items-center text-center mt-10 md:mt-12 lg:mt-0 p-6 
+      before:content-[''] before:absolute before:inset-0 before:-z-10 before:blur-[30px] before:bg-[#FF0000]/20">
+    <div className="text-[#FD0000] font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl pt-5 lg:pt-0">
+      OUR
     </div>
-
-
-    <div className="h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] bg-[#F5F5F5] rounded-3xl border-4 border-[#F5F5F5] flex flex-col justify-center items-center text-center mt-10 md:mt-12 lg:mt-0 p-6">
-      <div className="text-[#FD0000] font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl pt-5 lg:pt-0">
-        OUR
-      </div>
-      <div className="text-[#000000] font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl mb-7">
-        MISSION
-      </div>
-      <div className="text-[#3F3F3F] font-ultrabold tracking-wider text-lg lg:text-xl leading-tight">
-        To design, innovate, and<br />
-        excel in the field of<br />
-        microclass RC aviation, while<br />
-        fostering a culture of<br />
-        collaboration, creativity, and<br />
-        excellence. We aim to inspire<br />
-        future generations by<br />
-        showcasing the potential of<br />
-        engineering and teamwork in<br />
-        competitive settings.
-      </div>
+    <div className="text-[#000000] font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl mb-7">
+      MISSION
     </div>
+    <div className="text-[#3F3F3F] font-ultrabold tracking-wider text-lg lg:text-xl leading-tight">
+      To design, innovate, and<br />
+      excel in the field of<br />
+      microclass RC aviation, while<br />
+      fostering a culture of<br />
+      collaboration, creativity, and<br />
+      excellence. We aim to inspire<br />
+      future generations by<br />
+      showcasing the potential of<br />
+      engineering and teamwork in<br />
+      competitive settings.
+    </div>
+  </div>
+
 
     <div className="absolute bottom-[210vw] md:bottom-[99vw] lg:bottom-[24vw] left-[80%] md:left-[83%] lg:left-[90%]  rotate-[344deg] lg:rotate-[350deg] opacity-90 z-10">
       <Plane />
     </div>
+    
+    
   </div>
+  <ExploreAboutTeamButton
+      size="auto"
+      className="font-monument-extended font-ultrabold mt-[5vw] md:mt-[4vw] lg:mt-[5vw]"
+      onClick={() => console.log("Explore About Team Clicked")}
+    />
 </section>
 
 
