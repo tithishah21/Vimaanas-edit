@@ -55,7 +55,7 @@ export const LandingPage = () => {
       </div>
 
       {/* Grid Background - responsive grid system */}
-      <div className="absolute inset-0 px-4 sm:px-8 md:px-12 lg:px-20">
+      <div className="absolute w-full inset-0 px-4 sm:px-8 md:px-12 lg:px-20">
         <div className="w-full h-full grid grid-cols-6 grid-rows-6 md:grid-cols-10 md:grid-rows-10 lg:grid-cols-14 lg:grid-rows-14">
           {Array.from({ length: 196 }).map((_, i) => (
             <div 

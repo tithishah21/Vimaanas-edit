@@ -2,6 +2,7 @@ import UturnArrow from "../LandingPage/components/uturn_arrow";
 import Plane from "../LandingPage/components/plane";
 import ZigZagArrow from "../LandingPage/components/zigziag_arrow";
 import ExploreAboutTeamButton from "../buttons/ExploreAboutTeamButton";
+import { StandardWobbleCard } from "./wobblecard";
 
 export const AboutTeam = () => {
     return (
@@ -18,12 +19,12 @@ export const AboutTeam = () => {
   </div>
 
 
-  <div className="relative w-[104vw] lg:w-full flex justify-center items-center z-20 ">
+  <div className="relative w-full lg:w-full flex justify-center items-center z-20 ">
     <div className="absolute top-[70%] left-[33%] -translate-x-1/2 -translate-y-1/2 rotate-[85deg] blur-[2px] z-0">
       <Plane />
     </div>
 
-    <div className="text-stroke font-monument-extended font-ultrabold text-4xl md:text-7xl lg:text-9xl tracking-widest">
+    <div className="text-stroke font-monument-extended font-ultrabold text-[2.0625rem] md:text-7xl lg:text-9xl tracking-widest">
       WHO ARE WE?
     </div>
 
@@ -34,52 +35,30 @@ export const AboutTeam = () => {
   </div>
 
 
-  <div className="lg:flex w-screen justify-center gap-28 mt-10 lg:mt-20 relative z-20 ml-10 md:ml-20 lg:ml-0">
+  <div className="lg:flex w-full justify-center gap-28 mt-10 lg:mt-20 relative z-20 md:ml-20 lg:ml-0">
  
-    <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] bg-[#F5F5F5] rounded-3xl border-4 border-[#F5F5F5] flex flex-col justify-center items-center text-center p-6 
-      before:content-[''] before:absolute before:inset-0 before:-z-10 before:blur-[30px] before:bg-[#FF0000]/20">
-      <div className="text-[#000000] font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl mt-3">
-        WHO ARE
-      </div>
-      <div className="text-[#FD0000] font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl mb-5">
-        WE?
-      </div>
-      <div className="text-[#3F3F3F] font-ultrabold tracking-wider text-lg lg:text-xl leading-tight">
-        Team Vimaanas is a<br />
-        passionate and innovative<br />
-        microclass RC plane team<br />
-        driven by a shared love for<br />
-        aeronautics, engineering,<br />
-        and the spirit of competition.<br />
-        We are a diverse group of<br />
-        thinkers, designers, and<br />
-        builders who push the<br />
-        boundaries of flight and<br />
-        technology.
-      </div>
-    </div>
+  
 
-  <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] bg-[#F5F5F5] rounded-3xl border-4 border-[#F5F5F5] flex flex-col justify-center items-center text-center mt-10 md:mt-12 lg:mt-0 p-6 
-      before:content-[''] before:absolute before:inset-0 before:-z-10 before:blur-[30px] before:bg-[#FF0000]/20">
-    <div className="text-[#FD0000] font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl pt-5 lg:pt-0">
-      OUR
-    </div>
-    <div className="text-[#000000] font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl mb-7">
-      MISSION
-    </div>
-    <div className="text-[#3F3F3F] font-ultrabold tracking-wider text-lg lg:text-xl leading-tight">
-      To design, innovate, and<br />
-      excel in the field of<br />
-      microclass RC aviation, while<br />
-      fostering a culture of<br />
-      collaboration, creativity, and<br />
-      excellence. We aim to inspire<br />
-      future generations by<br />
-      showcasing the potential of<br />
-      engineering and teamwork in<br />
-      competitive settings.
-    </div>
-  </div>
+  <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw]">
+<div className="absolute inset-0 bg-pink-500 rounded-3xl blur-lg opacity-50"></div>
+<StandardWobbleCard
+        title="WHO ARE"
+        subtitle="WE?"
+        message="Team Vimaanas is a passionate and innovative microclass RC plane team driven by a shared love for aeronautics, engineering, and the spirit of competition. We are a diverse group of thinkers, deisgners, and builderswho push the boundaries of flight and technology."
+      />
+</div>
+
+
+<div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw]">
+<div className="absolute inset-0 bg-pink-500 rounded-3xl blur-lg opacity-50"></div>
+
+      
+      <StandardWobbleCard
+        title="OUR"
+        subtitle="MISSION"
+        message="To design, innovate, and excel in the field of microclass RC aviation, while fostering a culture of collaboration, creativity, and excellence.We aim to inspire future generations by showcasing the potential of engineering and teamwork in competitive settings."
+      />
+</div>
 
 
     <div className="absolute bottom-[210vw] md:bottom-[99vw] lg:bottom-[24vw] left-[80%] md:left-[83%] lg:left-[90%]  rotate-[344deg] lg:rotate-[350deg] opacity-90 z-10">
@@ -98,3 +77,6 @@ export const AboutTeam = () => {
 
     );
   };
+
+
+

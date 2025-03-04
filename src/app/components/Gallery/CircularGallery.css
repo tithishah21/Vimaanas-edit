@@ -1,0 +1,12 @@
+.circular-gallery {
+    width: 98.75vw;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    background-color: white; /* For visibility */
+  }
+  
+  .circular-gallery:active {
+    cursor: grabbing;
+  }
+  
