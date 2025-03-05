@@ -101,7 +101,7 @@ export const Navbar = () => {
   };
 
   return (
-    <header className="bg-bg text-white sticky top-0 z-50 font-monument-extended font-ultrabold overflow-x-hidden">
+    <header className="bg-bg text-white sticky top-0 z-[9999] font-monument-extended font-ultrabold overflow-x-hidden">
       <nav className="w-full mx-auto px-3 py-2 sm:py-3 lg:py-4">
         
         {/* Mobile Navbar (Appears on < lg) */}
@@ -164,7 +164,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu Overlay (Visible when isMenuOpen is true) */}
       {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-[#2A2929] z-40 mt-[3.5rem] sm:mt-[4rem]">
+        <div className="lg:hidden fixed inset-0 bg-[#2A2929] z-[9999] mt-[3rem] sm:mt-[3.5rem]">
           <div className="flex flex-col items-center space-y-4 p-6 pt-10">
             {navSections.map((section) => (
               <NavbarButton
