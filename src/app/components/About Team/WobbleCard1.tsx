@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 export const WobbleCard = ({
   children,
   containerClassName,
-  className,
 }: {
   children: React.ReactNode;
   containerClassName?: string;

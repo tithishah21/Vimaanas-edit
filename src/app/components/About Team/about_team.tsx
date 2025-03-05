@@ -73,8 +73,6 @@ export const AboutTeam = () => {
       onClick={() => console.log("Explore About Team Clicked")}
     />
 </section>
-
-
     );
   };
 

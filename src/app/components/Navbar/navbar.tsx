@@ -35,7 +35,15 @@ export const Navbar = () => {
         const element = document.getElementById(section);
         if (element) {
           const rect = element.getBoundingClientRect();
-          if (rect.top <= windowHeight / 3 && rect.bottom >= windowHeight / 3) {
+          const sectionTop = rect.top;
+          const sectionBottom = rect.bottom;
+          
+          // Check if the section is more than 33% visible in the viewport
+          const isMoreThanThirdVisible = 
+            sectionTop <= windowHeight * 2/3 && 
+            sectionBottom >= windowHeight * 1/3;
+
+          if (isMoreThanThirdVisible) {
             setSelectedSection(section);
             found = true;
             break;
@@ -44,7 +52,24 @@ export const Navbar = () => {
       }
 
       if (!found) {
-        setSelectedSection(null);
+        // If no section is prominently visible, check proximity to section tops
+        let closestSection = null;
+        let minDistance = Infinity;
+
+        for (const section of [...navSections, "contact"]) {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            const distance = Math.abs(rect.top);
+
+            if (distance < minDistance) {
+              minDistance = distance;
+              closestSection = section;
+            }
+          }
+        }
+
+        setSelectedSection(closestSection);
       }
     };
 

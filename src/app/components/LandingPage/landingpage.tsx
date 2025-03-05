@@ -28,8 +28,8 @@ export const LandingPage = () => {
         scale-[0.6] md:scale-[0.75] lg:scale-100"
       >
         <ProfileCard  
-          imageUrl={"/assets/team/krish.png"}
-          name="Krish"
+          imageUrl={"/assets/team/Priyank Dasondi - Team Captain.jpeg"}
+          name="Priyank"
           role="CAPTAIN"
           values={["Innovate","Fly","Conquer"]}
         />
@@ -47,8 +47,8 @@ export const LandingPage = () => {
         scale-[0.6] md:scale-[0.75] lg:scale-100"
       >
         <ProfileCard  
-          imageUrl={"/assets/team/krish.png"}
-          name="Krish"
+          imageUrl={"/assets/team/Priyank Dasondi - Team Captain.jpeg"}
+          name="Priyank"
           role="CAPTAIN"
           values={["Innovate","Fly","Conquer"]}
         />

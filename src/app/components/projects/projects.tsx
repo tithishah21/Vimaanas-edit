@@ -1,10 +1,9 @@
 import ExploreProjectsButton from "../buttons/ExploreProjectsButton";
 import AnimationCard from "../LandingPage/components/projectsanimation";
-import BG101 from "../LandingPage/components/BG-101"; // Adjust the path if needed
 
 export const Projects = () => {
     return (
-      <section id="about" className="relative w-full rounded-t-2xl bg-[#FFFFFF] text-white flex flex-col items-center justify-center overflow-hidden z-20 py-20">
+      <section id="projects" className="relative w-full rounded-t-2xl bg-[#FFFFFF] text-white flex flex-col items-center justify-center overflow-hidden z-20 py-20">
 
         {/* Heading Section */}
         <div className="relative w-[104vw] lg:w-full flex justify-center items-center z-20 mb-10">
