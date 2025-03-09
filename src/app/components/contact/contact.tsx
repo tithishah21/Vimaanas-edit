@@ -26,8 +26,8 @@ export const Contact = () => {
   }, []);
 
   return (
-    <footer className="bg-black text-white py-10 px-6 md:px-12 rounded-t-[4rem] mt-4">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-40">
+    <footer className="bg-[#2A2929] text-white py-10 px-6 md:px-12 rounded-t-[4rem] mt-4">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-16 lg:gap-40">
         <div className="flex flex-col items-center md:items-center">
           <Image src="/assets/logo.png" alt="VIMAANAS Logo" width={224} height={192} className="h-48 w-56" />
           <h2 className="text-5xl text-[#FD0000] font-monument-extended font-ultrabold mt-3">VIMAANAS</h2>
@@ -37,7 +37,7 @@ export const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-lg font-monument-extended font-ultrabold tracking-widest w-full items-center md:items-start text-center md:text-left">
           <div className="space-y-10">
             <div>
-              <h3 className="text-[#FD0000] text-2xl font-bold">Company</h3>
+              <h3 className="text-[#FD0000] text-2xl font-bold ">Company</h3>
               <ul className="mt-3 space-y-2">
                 <li><a href="#about" className="hover:text-[#FD0000] transition-colors">About Team</a></li>
                 <li><a href="#gallery" className="hover:text-[#FD0000] transition-colors">Gallery</a></li>
@@ -47,7 +47,7 @@ export const Contact = () => {
             </div>
             <div>
               <h3 className="text-[#FD0000] text-2xl font-bold">Address</h3>
-              <p className="mt-2">VIT University, Vellore.</p>
+              <p className="mt-2">VIT University<br/>Vellore.</p>
             </div>
           </div>
 
@@ -83,7 +83,7 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div className="border-t mt-8 pt-4 font-monument-extended font-ultrabold text-center tracking-widest text-2xl">
+      <div className="border-t mt-8 pt-4 font-monument-extended font-ultrabold text-center tracking-widest text-lg lg:text-2xl ">
         Made with <span className="text-red-500 font-monument-extended">❤️</span> by IEEE CS
       </div>
     </footer>

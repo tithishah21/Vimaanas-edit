@@ -4,8 +4,6 @@ import AnimationCard from "../LandingPage/components/projectsanimation";
 export const Projects = () => {
     return (
       <section id="projects" className="relative w-full rounded-t-2xl bg-[#FFFFFF] text-white flex flex-col items-center justify-center overflow-hidden z-20 py-20">
-
-        {/* Heading Section */}
         <div className="relative w-[104vw] lg:w-full flex justify-center items-center z-20 mb-10">
           <div className="text-stroke font-monument-extended font-ultrabold text-4xl md:text-7xl lg:text-9xl tracking-widest">
             S PROJECTS P
@@ -36,7 +34,7 @@ export const Projects = () => {
           <div className="font-monument-extended font-ultrabold text-2xl">2024-2025</div><br/>
         </div>
 
-        {/* Explore Projects Button */}
+        
         <ExploreProjectsButton
           size="auto"
           className="font-monument-extended font-ultrabold mt-[3%]"

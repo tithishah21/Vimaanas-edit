@@ -17,8 +17,8 @@ export const Gallery = () => {
       <div id="gallery" className="relative w-full lg:w-full flex justify-center items-center z-20 ">
    
 
-    <div className="text-stroke font-monument-extended font-ultrabold text-3xl md:text-7xl lg:text-9xl tracking-widest">
-      RY  GALLERY  GA
+    <div className="text-stroke font-monument-extended font-ultrabold text-3xl md:text-6xl lg:text-9xl tracking-wider">
+      RY GALLERY GA
     </div>
 
     <div className="absolute flex font-monument-extended font-ultrabold text-lg md:text-4xl lg:text-6xl tracking-widest top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-3 z-30">

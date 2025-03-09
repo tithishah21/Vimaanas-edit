@@ -17,8 +17,8 @@ export const Achievements = () => {
 <div className="lg:flex w-full justify-center gap-28 mt-10 lg:mt-20 relative z-20 md:ml-20 lg:ml-0">
 
 <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 sm:ml-0">
-<div className="absolute inset-0 bg-pink-500 rounded-3xl blur-lg opacity-50"></div>
-
+<div className="absolute inset-0 bg-pink-500 md:rounded-3xl blur-lg opacity-50"></div>
+      <div className="rounded-none md:rounded-3xl">
       <StandardWobbleCard
         title="1st Place"
         subtitle="Overall"
@@ -28,8 +28,9 @@ export const Achievements = () => {
             1st place overall in the Micro Class RC Aircrafts Category.
           </>
         }
-       
       />
+      </div>
+      
 </div>
 
 
