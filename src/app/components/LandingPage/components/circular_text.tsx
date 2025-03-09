@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { motion, useAnimation } from "framer-motion";
 
 interface CircularTextProps {
@@ -21,15 +21,6 @@ const getRotationTransition = (
   repeat: loop ? Infinity : 0,
 });
 
-const getTransition = (duration: number, from: number) => ({
-  rotate: getRotationTransition(duration, from),
-  scale: {
-    type: "spring",
-    damping: 20,
-    stiffness: 300,
-  },
-});
-
 const CircularText: React.FC<CircularTextProps> = ({
   text,
   spinDuration = 20,
@@ -40,58 +31,61 @@ const CircularText: React.FC<CircularTextProps> = ({
   const controls = useAnimation();
   const [currentRotation, setCurrentRotation] = useState(0);
 
+  // Memoized transition function to prevent unnecessary re-renders
+  const getTransition = useCallback(
+    (duration: number) => ({
+      rotate: getRotationTransition(duration, currentRotation),
+      scale: {
+        type: "spring",
+        damping: 20,
+        stiffness: 300,
+      },
+    }),
+    [currentRotation]
+  );
+
+  // Effect to start rotation animation
   useEffect(() => {
     controls.start({
       rotate: currentRotation + 360,
       scale: 1,
-      transition: getTransition(spinDuration, currentRotation),
+      transition: getTransition(spinDuration),
     });
-  }, [spinDuration, controls, onHover, text]);
+  }, [spinDuration, controls, onHover, text, currentRotation, getTransition]);
 
+  // Handle hover effects
   const handleHoverStart = () => {
     if (!onHover) return;
+    let newDuration = spinDuration;
     switch (onHover) {
       case "slowDown":
-        controls.start({
-          rotate: currentRotation + 360,
-          scale: 1,
-          transition: getTransition(spinDuration * 2, currentRotation),
-        });
+        newDuration *= 2;
         break;
       case "speedUp":
-        controls.start({
-          rotate: currentRotation + 360,
-          scale: 1,
-          transition: getTransition(spinDuration / 4, currentRotation),
-        });
+        newDuration /= 4;
         break;
       case "pause":
-        controls.start({
-          rotate: currentRotation,
-          scale: 1,
-          transition: {
-            rotate: { type: "spring", damping: 20, stiffness: 300 },
-            scale: { type: "spring", damping: 20, stiffness: 300 },
-          },
-        });
-        break;
+        controls.stop();
+        return;
       case "goBonkers":
-        controls.start({
-          rotate: currentRotation + 360,
-          scale: 0.8,
-          transition: getTransition(spinDuration / 20, currentRotation),
-        });
+        newDuration /= 20;
         break;
       default:
         break;
     }
+    controls.start({
+      rotate: currentRotation + 360,
+      scale: onHover === "goBonkers" ? 0.8 : 1,
+      transition: getTransition(newDuration),
+    });
   };
 
+  // Handle hover end (resume normal speed)
   const handleHoverEnd = () => {
     controls.start({
       rotate: currentRotation + 360,
       scale: 1,
-      transition: getTransition(spinDuration, currentRotation),
+      transition: getTransition(spinDuration),
     });
   };
 

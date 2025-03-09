@@ -2,7 +2,6 @@
 
 import React from "react";
 import ConnectButton from "../buttons/ConnectButton";
-import Image from "next/image";
 import Plane from "./components/plane";
 import UturnArrow from "./components/uturn_arrow";
 import ZigZagArrow from "./components/zigziag_arrow";
