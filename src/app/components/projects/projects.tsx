@@ -20,12 +20,11 @@ export const Projects = () => {
                 before:blur-[30px] before:bg-[#FF0000]/40 before:rounded-2xl">
           <AnimationCard
             imageSrc="/assets/ui components/BG-101.png" // Using BG101 image
-            altText="BG - 101 2024-2025"
             containerHeight="710px"
             containerWidth="300px"
             imageHeight="710px"
             imageWidth="1290px"
-            rotateAmplitude={12}
+            rotateAmplitude={2}
             scaleOnHover={0.9}
             showMobileWarning={false}
             />
