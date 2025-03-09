@@ -7,7 +7,7 @@ import Plane from "./components/plane";
 import UturnArrow from "./components/uturn_arrow";
 import ZigZagArrow from "./components/zigziag_arrow";
 import ProfileCard from "./components/profilecard";
-import CircularText from "./components/circular_text";
+import VitLogo from "./components/vitlogo";
 
 export const LandingPage = () => {
   return (
@@ -70,7 +70,7 @@ export const LandingPage = () => {
         </div>
       </div>
 
-      {/* Content - fully responsive with Tailwind classes */}
+
       <div className="relative z-10 flex flex-col items-center justify-center w-full text-center px-4">
         <h1 className="text-white font-monument-extended font-extrabold tracking-wide leading-[1] text-[11vw] md:text-[9vw] lg:text-[10vw]">
           TEAM
@@ -83,21 +83,9 @@ export const LandingPage = () => {
             IN
             <span className="relative inline-block">
               C
-              <div className="absolute transform translate-x-1/2 -translate-y-1/2 -right-[2vw] top-[10vw] flex items-center justify-center w-[15vw] h-[15vw] md:w-[12vw] md:h-[12vw] lg:w-[15vw] lg:h-[15vw] max-w-[200px] max-h-[200px] rounded-full bg-red-600">
-  <CircularText
-    text="VIT*INSTITUTE*OF*TECHNOLOGY*"
-    onHover="speedUp"
-    spinDuration={20}
-    className="absolute"
-  />
-  <Image
-    src="/assets/ui components/vit logo.png"
-    alt="VIT Logo"
-    width={100}
-    height={100}
-    className="w-[6vw] h-[6vw] md:w-[5vw] md:h-[5vw] lg:w-[6vw] lg:h-[6vw] max-w-[100px] max-h-[100px]"
-  />
-</div>;
+              <div className="absolute transform translate-x-1/2 -translate-y-1/2 -right-[7vw] lg:-right-[4vw] top-[14vw] lg:top-[12vw]">
+                <VitLogo />
+              </div>;
             </span>
           </span>
         </h1>
