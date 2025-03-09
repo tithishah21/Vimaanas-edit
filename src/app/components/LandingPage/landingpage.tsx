@@ -8,7 +8,6 @@ import UturnArrow from "./components/uturn_arrow";
 import ZigZagArrow from "./components/zigziag_arrow";
 import ProfileCard from "./components/profilecard";
 import VitLogo from "./components/vitlogo";
-
 export const LandingPage = () => {
   return (
     <section
