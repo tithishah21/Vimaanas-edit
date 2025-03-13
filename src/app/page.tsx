@@ -5,14 +5,14 @@ import { Projects } from './components/projects/projects';
 import { Achievements } from './components/achievements/achievements';
 import { Contact } from './components/contact/contact';
 import { LandingPage } from './components/LandingPage/landingpage';
-import { Gallery } from './components/Gallery/gallery';
+// import { Gallery } from './components/Gallery/gallery';
 
 export default function Home() {
   return (
     <>
       <LandingPage />
       <AboutTeam />
-      <Gallery/>
+      {/* <Gallery/> */}
       <Projects />
       <Achievements />
       <Contact />

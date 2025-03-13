@@ -1,5 +1,8 @@
 import ConnectButton from "../buttons/ConnectButton";
 import { StandardWobbleCard } from "../About Team/wobblecard";
+import UturnArrow from "../LandingPage/components/uturn_arrow";
+import Plane from "../LandingPage/components/plane";
+import ZigZagArrow from "../LandingPage/components/zigziag_arrow";
 
 export const Achievements = () => {
     return (
@@ -15,9 +18,17 @@ export const Achievements = () => {
 </div>
 </div>
 <div className="lg:flex w-full justify-center gap-28 mt-10 lg:mt-20 relative z-20 md:ml-20 lg:ml-0">
-
+  <div className="absolute left-[2vw] top-[14%] lg:top-[0%] rotate-[265deg] lg:rotate-[250deg] filter grayscale brightness-[0.42] contrast-[1.2] z-50">
+    <UturnArrow />
+  </div>
+  <div className="absolute left-[45vw] top-[50%] lg:top-[47%] rotate-[120deg] lg:rotate-[360deg] filter grayscale brightness-0 z-50">
+    <ZigZagArrow />
+  </div>
+  <div className="absolute blur-sm bottom-[210vw] md:bottom-[99vw] lg:bottom-[24vw] left-[80%] md:left-[83%] lg:left-[90%]  rotate-[344deg] lg:rotate-[350deg] opacity-90 z-10">
+      <Plane />
+    </div>
 <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 sm:ml-0">
-<div className="absolute inset-0 bg-pink-500 md:rounded-3xl blur-lg opacity-50"></div>
+<div className="absolute inset-0 bg-pink-500 md:rounded-3xl blur-xl opacity-30" style={{ backgroundColor: '#FF6666' }}></div>
       <div className="rounded-none md:rounded-3xl">
       <StandardWobbleCard
         title="1st Place"
@@ -35,7 +46,7 @@ export const Achievements = () => {
 
 
 <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 mt-6 sm:mt-0 sm:ml-0">
-<div className="absolute inset-0 bg-pink-500 rounded-3xl blur-lg opacity-50"></div>
+<div className="absolute inset-0 blur-xl opacity-30" style={{ backgroundColor: '#FF6666' }}></div>
 <StandardWobbleCard
         title="13th Place"
         subtitle="Overall"

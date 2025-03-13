@@ -24,7 +24,7 @@ export const StandardWobbleCard = ({
   return (
     <WobbleCard containerClassName="w-[90vw] lg:w-[40vw] h-auto lg:h-[30vw] relative">
       {/* Pink Shadow Background */}
-      <div className="absolute inset-0 bg-pink-500 rounded-3xl blur-lg opacity-50 -z-10"></div>
+      <div className="absolute inset-0 bg-red-900 rounded-3xl blur-xl opacity-60"></div>
 
       {/* Main Card Content */}
       <div

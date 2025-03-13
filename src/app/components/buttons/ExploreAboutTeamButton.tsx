@@ -14,11 +14,12 @@ export const ExploreAboutTeamButton = ({
   text = 'Explore About Team'
 }: ExploreAboutTeamButtonProps) => {
   const sizeClasses = {
-    sm: 'px-2 py-1 text-[10px] ',
-    md: 'px-3 py-2 text-xs',
-    lg: 'px-6 py-3 text-lg',
-    auto: 'px-2 py-1 text-[10px] md:px-3 md:py-2 md:text-xs lg:px-6 lg:py-3 lg:text-sm' 
+    sm: 'px-4 py-2 text-sm', 
+    md: 'px-6 py-3 text-lg', 
+    lg: 'px-10 py-5 text-xl', 
+    auto: 'px-4 py-2 text-sm md:px-6 md:py-3 md:text-base lg:px-10 lg:py-5 lg:text-xl'
   };
+  
 
   return (
     <button 
