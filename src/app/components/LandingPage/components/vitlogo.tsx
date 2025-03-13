@@ -4,7 +4,7 @@ import Image from "next/image";
 const VitLogo = () => {
   return (
     <div className="relative w-[30vw] h-[30vw] sm:w-[28vw] sm:h-[28vw] md:w-[26vw] md:h-[26vw] lg:w-[22vw] lg:h-[22vw] max-w-[300px] max-h-[300px] flex items-center justify-center">
-
+        
       <Image
         src="/assets/ui components/redellipse.png"
         alt="Red Background"

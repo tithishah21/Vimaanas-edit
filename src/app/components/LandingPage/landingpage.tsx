@@ -5,7 +5,6 @@ import ConnectButton from "../buttons/ConnectButton";
 import Plane from "./components/plane";
 import UturnArrow from "./components/uturn_arrow";
 import ZigZagArrow from "./components/zigziag_arrow";
-import ProfileCard from "./components/profilecard";
 import VitLogo from "./components/vitlogo";
 export const LandingPage = () => {
   return (
@@ -15,10 +14,18 @@ export const LandingPage = () => {
     >
       {/* Plane positioning - responsive with Tailwind */}
       <div
-        className="absolute z-[1] right-[4.5vw] md:right-[13vw] lg:right-[10vw] top-[35.5%] md:top-[37%] lg:top-[26%] 
+        className="absolute z-[1] right-[73vw] md:right-[69vw] lg:right-[70vw] top-[35.5%] md:top-[35%] lg:top-[16%] 
         transform -translate-y-1/2 flex flex-col items-center space-y-4 md:scale-90 lg:scale-100"
+        style={{ transform: "rotate(255deg)" }}
       >
         <UturnArrow />
+      </div>
+
+      <div
+        className="absolute z-[1] right-[13vw] md:right-[22vw] lg:right-[20vw] top-[36%] md:top-[36%] lg:top-[17%] 
+        transform -translate-y-1/2 flex flex-col items-center space-y-4 md:scale-90 lg:scale-150"
+        style={{ transform: "rotate(353deg)" }}
+      >
         <Plane />
       </div>
       <div
@@ -26,32 +33,21 @@ export const LandingPage = () => {
         transform -translate-y-1/2 flex-col items-center space-y-4 rotate-[20deg]
         scale-[0.6] md:scale-[0.75] lg:scale-100"
       >
-        <ProfileCard  
-          imageUrl={"/assets/team/Priyank Dasondi - Team Captain.jpeg"}
-          name="Priyank"
-          role="CAPTAIN"
-          values={["Innovate","Fly","Conquer"]}
-        />
       </div>
       <div
-        className="absolute z-[1] left-[4.5vw] md:left-[10vw] lg:left-[10vw] top-[42.5%] md:top-[45%] lg:top-[40%]
+        className="absolute z-[1] left-[21.5vw] md:left-[28vw] lg:left-[26vw] top-[49.5%] md:top-[53%] lg:top-[60%]
         transform -translate-y-1/2 scale-x-[-1] flex flex-col items-center"
       >
         <Plane />
-        <ZigZagArrow className="mt-16 scale-x-[-1]" />
       </div>
       <div
-        className="md:flex absolute z-[100] bottom-[30.5%] md:bottom-[25.5%] lg:bottom-[10%] left-[13%] md:left-[22%] lg:left-[21%]
-        transform -translate-y-1/2 flex-col items-center space-y-4 rotate-[-18deg]
-        scale-[0.6] md:scale-[0.75] lg:scale-100"
+        className="absolute z-[1] left-[84.5vw] md:left-[10vw] lg:left-[76vw] top-[49.5%] md:top-[45%] lg:top-[60%]
+        transform -translate-y-1/2 scale-x-[-1] flex flex-col items-center"
+        // style={{ transform: "rotate(5deg)" }}
       >
-        <ProfileCard  
-          imageUrl={"/assets/team/Priyank Dasondi - Team Captain.jpeg"}
-          name="Priyank"
-          role="CAPTAIN"
-          values={["Innovate","Fly","Conquer"]}
-        />
+        <ZigZagArrow className="scale-x-[-1]" />
       </div>
+      
 
       {/* Grid Background - responsive grid system */}
       <div className="absolute w-full inset-0 px-4 sm:px-8 md:px-12 lg:px-20">

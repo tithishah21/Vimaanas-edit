@@ -11,7 +11,7 @@ export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Use useMemo to prevent unnecessary re-renders
-  const navSections = useMemo(() => ["about", "gallery", "projects", "achievements"], []);
+  const navSections = useMemo(() => ["about", "Team Members", "projects", "achievements"], []);
 
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
