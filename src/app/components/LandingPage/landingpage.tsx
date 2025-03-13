@@ -77,7 +77,7 @@ export const LandingPage = () => {
             IN
             <span className="relative inline-block">
               C
-              <div className="absolute transform translate-x-1/2 -translate-y-1/2 -right-[7vw] lg:-right-[4vw] top-[14vw] lg:top-[12vw]">
+              <div className="absolute transform translate-x-1/2 -translate-y-1/2 -right-[7vw] lg:-right-[4vw] top-[14vw] lg:top-[11vw]">
                 <VitLogo />
               </div>;
             </span>

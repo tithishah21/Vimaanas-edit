@@ -20,17 +20,17 @@ const VitLogo = () => {
             text="VELLORE INSTITUTE OF TECHNOLOGY • "
             onHover="speedUp"
             spinDuration={20}
-            className="absolute w-full h-full text-sm font-semibold tracking-wider leading-none"
+            className="absolute w-full h-full text-xs font-semibold tracking-wider leading-none"
           />
         </div>
 
 
         <div className="lg:hidden">
           <CircularText
-            text="VIT VELLORE • "
+            text="VIT • VELLORE • "
             onHover="speedUp"
-            spinDuration={20}
-            className="absolute w-full h-full text-xs font-semibold tracking-widest leading-none"
+            spinDuration={15}
+            className="absolute w-full h-full text-xs font-semibold tracking-tighter leading-none"
           />
         </div>
       </div>
@@ -39,9 +39,9 @@ const VitLogo = () => {
       <Image
         src="/assets/ui components/logo_vit.png"
         alt="VIT Logo"
-        width={220}
-        height={220}
-        className="relative w-[16vw] h-[16vw] sm:w-[14vw] sm:h-[14vw] md:w-[12vw] md:h-[12vw] lg:w-[12vw] lg:h-[12vw] max-w-[180px] max-h-[180px]"
+        width={400}
+        height={400}
+        className="relative w-[16vw] h-[20vw] sm:w-[14vw] sm:h-[18vw] md:w-[16vw] md:h-[20vw] lg:w-[17vw] lg:h-[23vw] max-w-[200px] max-h-[220px]"
       />
     </div>
   );
