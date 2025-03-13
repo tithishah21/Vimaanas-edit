@@ -41,8 +41,8 @@ export const LandingPage = () => {
         <Plane />
       </div>
       <div
-        className="absolute z-[1] left-[84.5vw] md:left-[10vw] lg:left-[76vw] top-[49.5%] md:top-[45%] lg:top-[60%]
-        transform -translate-y-1/2 scale-x-[-1] flex flex-col items-center"
+        className="absolute z-[1] left-[82vw] md:hidden lg:left-[76vw] top-[49.5%] lg:top-[60%]
+        transform -translate-y-1/2 scale-x-[1] flex flex-col items-center"
         // style={{ transform: "rotate(5deg)" }}
       >
         <ZigZagArrow className="scale-x-[-1]" />
