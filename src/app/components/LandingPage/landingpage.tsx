@@ -10,7 +10,8 @@ export const LandingPage = () => {
   return (
     <section
       id="landing"
-      className="h-screen w-full relative bg-bg text-white overflow-hidden flex flex-col items-center justify-center"
+      className="w-full relative bg-bg text-white  flex flex-col items-center justify-center"
+      
     >
       {/* Plane positioning - responsive with Tailwind */}
       <div
@@ -48,24 +49,29 @@ export const LandingPage = () => {
         <ZigZagArrow className="scale-x-[-1]" />
       </div>
       
-
+    
       {/* Grid Background - responsive grid system */}
-      <div className="absolute w-full inset-0 px-4 sm:px-8 md:px-12 lg:px-20">
-        <div className="w-full h-full grid grid-cols-6 grid-rows-6 md:grid-cols-10 md:grid-rows-10 lg:grid-cols-14 lg:grid-rows-14">
-          {Array.from({ length: 196 }).map((_, i) => (
-            <div 
-              key={i} 
-              className={`border border-white/10 backdrop-blur-md ${
-                (i >= 36 && i < 100) ? 'hidden md:block lg:block' : 
-                (i >= 100) ? 'hidden lg:block' : ''
-              }`} 
-            />
-          ))}
-        </div>
-      </div>
+      {/* Grid Background - responsive grid system with square on mobile */}
+<div className="absolute inset-0 flex items-center justify-center">
+  <div className="w-full h-full px-4 sm:px-8 md:px-12 lg:px-20">
+    <div className="aspect-square w-full max-w-full mx-auto 
+                   md:aspect-auto md:w-full md:h-full
+                   grid grid-cols-6 grid-rows-6 md:grid-cols-10 md:grid-rows-10 lg:grid-cols-14 lg:grid-rows-14">
+      {Array.from({ length: 196 }).map((_, i) => (
+        <div 
+          key={i} 
+          className={`border border-white/10 backdrop-blur-md ${
+            (i >= 36 && i < 100) ? 'hidden md:block lg:block' : 
+            (i >= 100) ? 'hidden lg:block' : ''
+          }`} 
+        />
+      ))}
+    </div>
+  </div>
+</div>
 
 
-      <div className="relative z-10 flex flex-col items-center justify-center w-full text-center px-4">
+      <div className="relative z-10 flex flex-col mt-16 md:mt-6 items-center justify-center w-full text-center px-4">
         <h1 className="text-white font-monument-extended font-extrabold tracking-wide leading-[1] text-[11vw] md:text-[9vw] lg:text-[10vw]">
           TEAM
         </h1>
@@ -86,9 +92,9 @@ export const LandingPage = () => {
 
         <ConnectButton
           size="auto"
-          className="font-monument-extended font-ultrabold mt-[5vw] md:mt-[4vw] lg:mt-[5vw]"
+          className="font-monument-extended font-ultrabold mt-12 md:mt-[4vw] lg:mt-[17.5vh] mb-16 md:mb-4"
           onClick={() => console.log("Contact Us Clicked")}
-          text="Contact US!"
+          text="Contact US !"
         />
       </div>
     </section>
