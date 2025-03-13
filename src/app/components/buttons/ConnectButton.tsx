@@ -15,10 +15,10 @@ export const ConnectButton = ({
 }: ConnectButtonProps) => {
   // Fixed size classes
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm', 
-    md: 'px-6 py-3 text-lg', 
-    lg: 'px-10 py-5 text-xl', 
-    auto: 'px-4 py-2 text-sm md:px-6 md:py-3 md:text-base lg:px-10 lg:py-5 lg:text-xl'
+    sm: 'px-2 py-1 text-[10px] sm:text-xs',
+    md: 'px-3 py-2 text-xs',
+    lg: 'px-6 py-3 text-sm',
+    auto: 'px-2 py-1 text-[10px] md:px-3 md:py-2 md:text-xs lg:px-6 lg:py-3 lg:text-sm' // Responsive sizing
   };
 
   return (

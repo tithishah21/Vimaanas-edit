@@ -34,7 +34,7 @@ export const Contact = () => {
           <p className="font-monument-extended font-bold tracking-wide text-sm mt-2">Copyright © | All Rights Reserved</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-lg font-monument-extended font-ultrabold tracking-widest w-full items-center md:items-start text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-base font-monument-extended font-semibold tracking-widest w-full items-center md:items-start text-center md:text-left">
           <div className="space-y-10">
             <div>
               <h3 className="text-[#FD0000] text-2xl font-bold ">Company</h3>

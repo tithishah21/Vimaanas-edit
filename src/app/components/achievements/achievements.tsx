@@ -1,8 +1,9 @@
-import ConnectButton from "../buttons/ConnectButton";
+
 import { StandardWobbleCard } from "../About Team/wobblecard";
 import UturnArrow from "../LandingPage/components/uturn_arrow";
 import Plane from "../LandingPage/components/plane";
 import ZigZagArrow from "../LandingPage/components/zigziag_arrow";
+import ExploreAboutTeamButton from "../buttons/ExploreAboutTeamButton";
 
 export const Achievements = () => {
     return (
@@ -61,7 +62,7 @@ export const Achievements = () => {
 
 </div>
 <div className="flex w-full items-center justify-center">
-<ConnectButton
+<ExploreAboutTeamButton
         size="auto"
         className="font-monument-extended font-ultrabold mt-[5vw] md:mt-[4vw] lg:mt-[4vw]"
         onClick={() => console.log("Contact Us Clicked")}
