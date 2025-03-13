@@ -24,7 +24,7 @@ export const Achievements = () => {
   <div className="absolute left-[45vw] top-[50%] lg:top-[47%] rotate-[120deg] lg:rotate-[360deg] filter grayscale brightness-0 z-50">
     <ZigZagArrow />
   </div>
-  <div className="absolute blur-sm bottom-[210vw] md:bottom-[99vw] lg:bottom-[24vw] left-[80%] md:left-[83%] lg:left-[90%]  rotate-[344deg] lg:rotate-[350deg] opacity-90 z-10">
+  <div className="absolute lg:blur-sm bottom-[125vw] md:bottom-[99vw] lg:bottom-[24vw] left-[85%] md:left-[83%] lg:left-[90%]  rotate-[344deg] lg:rotate-[350deg] opacity-90 z-10">
       <Plane />
     </div>
 <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 sm:ml-0">

@@ -61,7 +61,7 @@ export const AboutTeam = () => {
 </div>
 
 
-    <div className="absolute bottom-[210vw] md:bottom-[99vw] lg:bottom-[24vw] left-[80%] md:left-[83%] lg:left-[90%]  rotate-[344deg] lg:rotate-[350deg] opacity-90 z-10">
+    <div className="absolute bottom-[175vw] md:bottom-[99vw] lg:bottom-[24vw] left-[85%] md:left-[83%] lg:left-[90%]  rotate-[344deg] lg:rotate-[350deg] opacity-90 z-10">
       <Plane />
     </div>
     
