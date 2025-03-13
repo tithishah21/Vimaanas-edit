@@ -14,7 +14,7 @@ export const AboutTeam = () => {
   </div>
 
 
-  <div className="absolute left-[45vw] top-[50%] lg:top-[47%] rotate-[120deg] lg:rotate-[360deg] filter grayscale brightness-0 z-50">
+  <div className="absolute left-[45vw] top-[52%] lg:top-[62%] rotate-[120deg] lg:rotate-[360deg] filter grayscale brightness-0 z-50">
     <ZigZagArrow />
   </div>
 
@@ -40,7 +40,7 @@ export const AboutTeam = () => {
   
 
   <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 sm:ml-0">
-<div className="absolute inset-0  rounded-3xl blur-xl opacity-30" style={{ backgroundColor: '#FF6666' }}></div>
+<div className="absolute inset-0 bg-pink-500 rounded-3xl blur-lg opacity-50"></div>
 <StandardWobbleCard
         title="WHO ARE"
         subtitle="WE?"
@@ -49,8 +49,8 @@ export const AboutTeam = () => {
 </div>
 
 
-<div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 sm:ml-0 mt-6 lg:mt-0 ">
-<div className="absolute inset-0 rounded-3xl blur-xl opacity-30" style={{ backgroundColor: '#FF6666' }}></div>
+<div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 sm:ml-0 mt-4 sm:mt-0">
+<div className="absolute inset-0 bg-pink-500 rounded-3xl blur-lg opacity-50"></div>
 
       
       <StandardWobbleCard
@@ -61,7 +61,7 @@ export const AboutTeam = () => {
 </div>
 
 
-    <div className="absolute bottom-[175vw] md:bottom-[99vw] lg:bottom-[24vw] left-[85%] md:left-[83%] lg:left-[90%]  rotate-[344deg] lg:rotate-[350deg] opacity-90 z-10">
+    <div className="absolute bottom-[210vw] md:bottom-[99vw] lg:bottom-[24vw] left-[80%] md:left-[83%] lg:left-[90%]  rotate-[344deg] lg:rotate-[350deg] opacity-90 z-10">
       <Plane />
     </div>
     
@@ -69,10 +69,12 @@ export const AboutTeam = () => {
   </div>
   <ExploreAboutTeamButton
       size="auto"
-      className=" font-monument-extended font-ultrabold mt-[5vw] md:mt-[3vw] lg:mt-[2.5vw]"
+      className="font-monument-extended font-ultrabold mt-[5vw] md:mt-[4vw] lg:mt-[5vw]"
       onClick={() => console.log("Explore About Team Clicked")}
     />
 </section>
+
+
     );
   };
 
