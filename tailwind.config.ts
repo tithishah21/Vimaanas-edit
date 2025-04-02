@@ -30,8 +30,20 @@ export default {
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.text-stroke': {
-          '-webkit-text-stroke': '4px #D2D2D2',  
-          'color': '#FFFFFF',                    
+          '-webkit-text-stroke': '3px #D2D2D2',
+          'color': '#FFFFFF',
+        },
+        '.text-stroke-sm': {
+          '-webkit-text-stroke': '1.7px #D2D2D2',
+          'color': '#FFFFFF',
+        },
+        '.text-stroke-xs': {
+          '-webkit-text-stroke': '1px #D2D2D2',
+          'color': '#FFFFFF',
+        },
+        '.text-stroke-xxs': {
+          '-webkit-text-stroke': '0.7px #D2D2D2',
+          'color': '#FFFFFF',
         },
       };
       addUtilities(newUtilities,);

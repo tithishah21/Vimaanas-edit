@@ -83,9 +83,17 @@ export const Contact = () => {
         </div>
       </div>
 
-      <div className="border-t mt-8 pt-4 font-monument-extended font-ultrabold text-center tracking-widest text-lg lg:text-2xl ">
-        Made with <span className="text-red-500 font-monument-extended">❤️</span> by IEEE CS
+      <div className="border-t mt-8 pt-4 font-monument-extended font-ultrabold text-center tracking-widest text-lg lg:text-2xl">
+        Made with <span className="text-red-500 font-monument-extended">❤️</span> by  
+        <a 
+          href="https://www.instagram.com/ieeecs_vit" 
+          target="_blank" 
+          className="ml-1"
+        >
+          ieee-cs
+        </a>
       </div>
+
     </footer>
   );
 };

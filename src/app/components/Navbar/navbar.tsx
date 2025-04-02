@@ -9,6 +9,7 @@ import NavbarButton from "../buttons/NavbarButton";
 export const Navbar = () => {
   const [selectedSection, setSelectedSection] = useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   // Use useMemo to prevent unnecessary re-renders
   const navSections = useMemo(() => ["about", "Team Members", "projects", "achievements"], []);
@@ -96,7 +97,32 @@ export const Navbar = () => {
       });
 
       setSelectedSection(id);
-      setIsMenuOpen(false);
+      
+      // Handle menu closing with animation
+      if (isMenuOpen) {
+        setIsAnimating(true);
+        setTimeout(() => {
+          setIsMenuOpen(false);
+          setIsAnimating(false);
+        }, 300); // Match this to the CSS transition duration
+      }
+    }
+  };
+
+  const toggleMenu = () => {
+    setIsAnimating(true);
+    if (isMenuOpen) {
+      // Start exit animation
+      setTimeout(() => {
+        setIsMenuOpen(false);
+        setIsAnimating(false);
+      }, 300); // Match this to the CSS transition duration
+    } else {
+      // Start entry animation
+      setIsMenuOpen(true);
+      setTimeout(() => {
+        setIsAnimating(false);
+      }, 300); // Match this to the CSS transition duration
     }
   };
 
@@ -107,10 +133,12 @@ export const Navbar = () => {
         {/* Mobile Navbar (Appears on < lg) */}
         <div className="flex justify-between items-center lg:hidden">
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white p-1.5 focus:outline-none shrink-0"
+            onClick={toggleMenu}
+            className="text-white p-1.5 focus:outline-none shrink-0 relative"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           >
-            {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            <Menu className={`w-5 h-5 absolute transition-all duration-300 ${isMenuOpen ? 'opacity-0 rotate-90 scale-0' : 'opacity-100 rotate-0 scale-100'}`} />
+            <X className={`w-5 h-5 absolute transition-all duration-300 ${isMenuOpen ? 'opacity-100 rotate-0 scale-100' : 'opacity-0 rotate-90 scale-0'}`} />
           </button>
 
           <div className="flex items-center justify-center space-x-1.5 shrink-0">
@@ -162,23 +190,34 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay (Visible when isMenuOpen is true) */}
-      {isMenuOpen && (
-        <div className="lg:hidden fixed inset-0 bg-[#2A2929] z-[9999] mt-[3rem] sm:mt-[3.5rem]">
-          <div className="flex flex-col items-center space-y-4 p-6 pt-10">
-            {navSections.map((section) => (
-              <NavbarButton
-                key={section}
-                onClick={() => scrollToSection(section)}
-                isSelected={selectedSection === section}
-                className="w-full max-w-sm text-center"
-              >
-                {section === "about" ? "About Team" : section}
-              </NavbarButton>
-            ))}
-          </div>
+      {/* Mobile Menu Overlay with Animation */}
+      <div 
+        className={`lg:hidden fixed inset-0 bg-[#2A2929] z-[9999] mt-[3rem] sm:mt-[3.5rem] transition-all duration-300 ease-in-out transform ${
+          isMenuOpen 
+            ? 'translate-y-0 opacity-100' 
+            : 'translate-y-full opacity-0 pointer-events-none'
+        }`}
+      >
+        <div className="flex flex-col items-center space-y-4 p-6 pt-10">
+          {navSections.map((section, index) => (
+            <NavbarButton
+              key={section}
+              onClick={() => scrollToSection(section)}
+              isSelected={selectedSection === section}
+              className={`w-full max-w-sm text-center transition-all duration-300 ease-in-out transform ${
+                isMenuOpen && !isAnimating
+                  ? 'translate-y-0 opacity-100'
+                  : 'translate-y-4 opacity-0'
+              }`}
+              style={{ 
+                transitionDelay: isMenuOpen ? `${index * 75}ms` : '0ms'
+              }}
+            >
+              {section === "about" ? "About Team" : section}
+            </NavbarButton>
+          ))}
         </div>
-      )}
+      </div>
     </header>
   );
 };
