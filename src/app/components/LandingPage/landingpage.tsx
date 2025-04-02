@@ -14,7 +14,7 @@
      >
        {/* Plane positioning - responsive with Tailwind */}
        <div
-         className="absolute z-[1] right-[73vw] md:right-[69vw] lg:right-[70vw] top-[35.5%] md:top-[35%] lg:top-[16%] 
+         className="absolute z-[1] right-[73vw] md:right-[69vw] lg:right-[70vw] top-[33.5%] md:top-[35%] lg:top-[16%] 
          transform -translate-y-1/2 flex flex-col items-center space-y-4 md:scale-90 lg:scale-100"
          style={{ transform: "rotate(255deg)" }}
        >
@@ -22,7 +22,7 @@
        </div>
  
        <div
-         className="absolute z-[1] right-[13vw] md:right-[22vw] lg:right-[20vw] top-[36%] md:top-[36%] lg:top-[17%] 
+         className="absolute z-[1] right-[13vw] md:right-[22vw] lg:right-[20vw] top-[34%] md:top-[36%] lg:top-[17%] 
          transform -translate-y-1/2 flex flex-col items-center space-y-4 md:scale-90 lg:scale-150"
          style={{ transform: "rotate(353deg)" }}
        >
