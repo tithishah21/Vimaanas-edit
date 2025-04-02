@@ -90,7 +90,7 @@ export const Contact = () => {
           target="_blank" 
           className="ml-1"
         >
-          ieee-cs
+          IEEE-CS
         </a>
       </div>
 
