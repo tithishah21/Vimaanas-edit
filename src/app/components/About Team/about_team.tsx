@@ -1,4 +1,7 @@
+"use client"; // Make sure this component is client-side
+
 import React from 'react';
+import { useRouter } from 'next/navigation'; // next/router if using pages router
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import UturnArrow from "../LandingPage/components/uturn_arrow";
@@ -8,17 +11,10 @@ import ExploreAboutTeamButton from "../buttons/ExploreAboutTeamButton";
 import { StandardWobbleCard } from "./wobblecard";
 
 export const AboutTeam = () => {
+  const router = useRouter();
+
   const handleExploreAboutTeamClick = () => {
-    toast.info('Coming Soon', {
-      position: 'bottom-center',
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: 'dark', // Adjust theme as needed
-    });
+    router.push('/aboutteampage'); 
   };
 
   return (
@@ -68,7 +64,7 @@ export const AboutTeam = () => {
       <ExploreAboutTeamButton
         size="auto"
         className="font-monument-extended font-ultrabold mt-[5vw] md:mt-[4vw] lg:mt-[5vw]"
-        onClick={handleExploreAboutTeamClick} // Use the new handler here
+        onClick={handleExploreAboutTeamClick}
       />
       <ToastContainer />
     </section>
