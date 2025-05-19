@@ -42,7 +42,7 @@ export const Achievements = () => {
           <Plane />
         </div>
         <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 sm:ml-0">
-          <div className="absolute inset-0 bg-pink-500 md:rounded-3xl blur-xl opacity-30" style={{ backgroundColor: '#FF6666' }}></div>
+          <div className="absolute inset-0  md:rounded-3xl blur-xl opacity-60" style={{ backgroundColor: '#ff9999' }}></div>
           <div className="rounded-none md:rounded-3xl">
             <StandardWobbleCard
               title="1st Place"
@@ -57,7 +57,7 @@ export const Achievements = () => {
           </div>
         </div>
         <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 mt-6 sm:mt-0 sm:ml-0">
-          <div className="absolute inset-0 blur-xl opacity-30" style={{ backgroundColor: '#FF6666' }}></div>
+          <div className="absolute inset-0 blur-xl opacity-60" style={{ backgroundColor: '#ff9999' }}></div>
           <StandardWobbleCard
             title="13th Place"
             subtitle="Overall"

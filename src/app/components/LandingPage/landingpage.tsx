@@ -10,11 +10,11 @@
    return (
      <section
        id="landing"
-       className="h-screen w-full relative bg-bg text-white overflow-hidden flex flex-col items-center justify-center"
+       className="h-[500px] lg:h-screen w-full relative bg-bg text-white overflow-hidden flex flex-col items-center justify-center"
      >
        {/* Plane positioning - responsive with Tailwind */}
        <div
-         className="absolute z-[1] right-[73vw] md:right-[69vw] lg:right-[70vw] top-[33.5%] md:top-[35%] lg:top-[16%] 
+         className="absolute z-[1] right-[73vw] md:right-[69vw] lg:right-[70vw] top-[23.5%] md:top-[19%] lg:top-[16%] 
          transform -translate-y-1/2 flex flex-col items-center space-y-4 md:scale-90 lg:scale-100"
          style={{ transform: "rotate(255deg)" }}
        >
@@ -22,7 +22,7 @@
        </div>
  
        <div
-         className="absolute z-[1] right-[13vw] md:right-[22vw] lg:right-[20vw] top-[34%] md:top-[36%] lg:top-[17%] 
+         className="absolute z-[1] right-[13vw] md:right-[22vw] lg:right-[20vw] top-[24%] md:top-[20%] lg:top-[17%] 
          transform -translate-y-1/2 flex flex-col items-center space-y-4 md:scale-90 lg:scale-150"
          style={{ transform: "rotate(353deg)" }}
        >
@@ -41,12 +41,12 @@
          <Plane />
        </div>
        <div
-         className="absolute z-[1] left-[84.5vw] md:left-[10vw] lg:left-[76vw] top-[49.5%] md:top-[45%] lg:top-[60%]
+         className="absolute z-[1] left-[81.5vw] md:left-[77vw] lg:left-[76vw] top-[49.5%] md:top-[53%] lg:top-[60%]
          transform -translate-y-1/2 scale-x-[-1] flex flex-col items-center"
          
          // style={{ transform: "rotate(5deg)" }}
        >
-         <ZigZagArrow className="scale-x-[-1]" />
+         <ZigZagArrow className="scale-x-[1]" />
        </div>
  
  
