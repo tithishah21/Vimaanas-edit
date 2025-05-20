@@ -24,6 +24,21 @@ export default {
       gridTemplateColumns: {
         '14': 'repeat(14, minmax(0, 1fr))',
       },
+      keyframes: {
+        flyin: {
+          '0%': {
+            transform: 'translateY(100px) rotate(0deg)',
+            opacity: '0',
+          },
+          '100%': {
+            transform: 'translateY(0) rotate(10deg)',
+            opacity: '1',
+          },
+        },
+      },
+      animation: {
+        flyin: 'flyin 1.5s ease-in forwards',
+      },
     },
   },
   plugins: [
@@ -46,7 +61,7 @@ export default {
           'color': '#FFFFFF',
         },
       };
-      addUtilities(newUtilities,);
+      addUtilities(newUtilities);
     }),
   ],
 } satisfies Config;
