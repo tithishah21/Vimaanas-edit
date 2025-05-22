@@ -8,6 +8,7 @@ import AimSection from './aim/page';
 import ArchiveSection from './archive/page';
 import LeadershipSection from './leadership/page';
 import PartnersSection from './partners/page';
+import FooterSection from './footer/page';
 
 
 const animatedWords = ['', 'ACHIEVE', 'PROWESS', 'EXCEL', 'TRIUMPH', 'DELIVER*'];
@@ -80,6 +81,7 @@ export default function AboutTeamPage() {
       <ArchiveSection />
       <LeadershipSection />
       <PartnersSection />
+      <FooterSection />
 
     </div>
   );
