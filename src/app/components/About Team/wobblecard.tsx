@@ -3,11 +3,12 @@ import { WobbleCard } from "./WobbleCard1";
 interface StandardWobbleCardProps {
   title: string;
   subtitle: string;
-  message: string | React.ReactNode; 
+  message: string | React.ReactNode;
+  children?: React.ReactNode; // ✅ Allow inserting image or other elements
   titleColor?: string;
   subtitleColor?: string;
   textColor?: string;
-  bgColor?: string; 
+  bgColor?: string;
   borderColor?: string;
 }
 
@@ -15,6 +16,7 @@ export const StandardWobbleCard = ({
   title,
   subtitle,
   message,
+  children, // ✅ Accept children
   titleColor = "#FD0000",
   subtitleColor = "#000000",
   textColor = "#3F3F3F",
@@ -31,9 +33,12 @@ export const StandardWobbleCard = ({
         className="relative w-full h-full rounded-3xl border-4 flex flex-col justify-center items-center text-center p-6"
         style={{ backgroundColor: bgColor, borderColor: borderColor }}
       >
+        {/* ✅ Image or custom content goes here */}
+        {children && <div className="mb-4">{children}</div>}
+
         {/* Title */}
         <div
-          className="font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl pt-5 lg:pt-0"
+          className="font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl pt-2"
           style={{ color: titleColor }}
         >
           {title}
@@ -41,7 +46,7 @@ export const StandardWobbleCard = ({
 
         {/* Subtitle */}
         <div
-          className="font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl mb-7"
+          className="font-monument-extended font-ultrabold text-3xl md:text-4xl lg:text-5xl mb-4"
           style={{ color: subtitleColor }}
         >
           {subtitle}

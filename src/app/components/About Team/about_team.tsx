@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation'; // next/router if using pages router
-import { toast, ToastContainer } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 import UturnArrow from "../LandingPage/components/uturn_arrow";
 import Plane from "../LandingPage/components/plane";
@@ -66,7 +66,7 @@ export const AboutTeam = () => {
         className="font-monument-extended font-ultrabold mt-[5vw] md:mt-[4vw] lg:mt-[5vw]"
         onClick={handleExploreAboutTeamClick}
       />
-      <ToastContainer />
+      
     </section>
   );
 };
