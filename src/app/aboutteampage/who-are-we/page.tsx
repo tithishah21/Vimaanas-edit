@@ -38,15 +38,15 @@ export default function WhoAreWeSection() {
             opacity: 0;
           }
           60% {
-            transform: translateX(-30px) translateY(-98px) rotate(12deg) scale(1.6);
+            transform: translateX(-7%px) translateY(-98px) rotate(12deg) scale(1.6);
             opacity: 1;
           }
           80% {
-            transform: translateX(-15px) translateY(-95px) rotate(12deg) scale(1.6);
+            transform: translateX(-13%) translateY(-95px) rotate(12deg) scale(1.6);
             opacity: 1;
           }
           100% {
-            transform: translateX(-20px) translateY(-96px) rotate(12deg) scale(1.6);
+            transform: translateX(-20%) translateY(-96px) rotate(12deg) scale(1.6);
             opacity: 1;
           }
         }
