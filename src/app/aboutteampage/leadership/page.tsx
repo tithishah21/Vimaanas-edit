@@ -35,7 +35,7 @@ export default function LeadershipSection() {
       className="relative w-full bg-[#FFFFFF] text-white flex flex-col items-center justify-center overflow-hidden z-20 pt-10 pb-20"
     >
       {/* Header Section */}
-      <div className="relative w-full lg:w-full flex justify-center items-center z-20 lg:mb-12">
+      <div className="relative w-full lg:w-full flex justify-center items-center z-20 lg:mb-6">
         <div className="absolute top-[70%] left-[30%] -translate-x-1/2 -translate-y-1/2 rotate-[85deg] blur-[2px] z-0">
           <Plane />
         </div>
@@ -58,17 +58,17 @@ export default function LeadershipSection() {
                 <Image
                   src={leader.image}
                   alt={leader.name}
-                  width={400}
-                  height={400}
+                  width={800}
+                  height={800}
                   className="rounded-2xl object-cover"
                   priority
                 />
               </div>
               <div className="text-center">
-                <div className={`${leader.titleColor} font-monument-extended font-ultrabold text-2xl tracking-wider`}>
+                <div className={`${leader.titleColor} font-monument-extended font-ultrabold text-3xl tracking-wider`}>
                   {leader.title}
                 </div>
-                <div className={`${leader.nameColor} font-monument-extended font-ultrabold text-xl tracking-wider`}>
+                <div className={`${leader.nameColor} font-monument-extended font-ultrabold text-2xl tracking-wider`}>
                   {leader.name}
                 </div>
               </div>
@@ -84,8 +84,8 @@ export default function LeadershipSection() {
                 <Image
                   src={leader.image}
                   alt={leader.name}
-                  width={300}
-                  height={300}
+                  width={800}
+                  height={800}
                   className="rounded-3xl object-cover"
                   priority
                 />
