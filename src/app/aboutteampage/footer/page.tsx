@@ -49,7 +49,7 @@ export default function FooterPage() {
             <div>
               <h3 className="text-[#FD0000] text-xl md:text-2xl font-bold">Company</h3>
               <ul className="mt-3 space-y-2">
-                <li><a href="#about" className="hover:text-[#FD0000] transition-colors">About Team</a></li>
+                <li><a href="#about" className="text-[#FD0000] transition-colors font-ultrabold">About Team</a></li>
                 <li><a href="#gallery" className="hover:text-[#FD0000] transition-colors">Gallery</a></li>
                 <li><a href="#projects" className="hover:text-[#FD0000] transition-colors">Projects</a></li>
                 <li><a href="#achievements" className="hover:text-[#FD0000] transition-colors">Achievements</a></li>
