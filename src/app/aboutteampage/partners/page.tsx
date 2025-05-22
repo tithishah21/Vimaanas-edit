@@ -1,4 +1,12 @@
 import Plane from "@/app/components/LandingPage/components/plane";
+import Ansys from "./ansys.svg";
+import Savox from "./savox.svg";
+import Scorpion from "./scorpion.svg";
+import Simscale from "./simscale.svg";
+import Solidworks from "./solidworks.svg";
+import Spektrum from "./spektrum.svg";
+import Tmotor from "./tmotor.svg";
+
 export default function PartnersSection() {
     return (
       <section
@@ -17,7 +25,9 @@ export default function PartnersSection() {
               <div className="text-[#FF0000]">PARTNERS</div>
             </div>
           </div>
+
       </section>
+
     );
   }
   
