@@ -2,7 +2,6 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useEffect, useState } from 'react';
-
 import WhoAreWeSection from './who-are-we/page';
 import AimSection from './aim/page';
 import ArchiveSection from './archive/page';
@@ -11,7 +10,7 @@ import PartnersSection from './partners/page';
 import FooterSection from './footer/page';
 
 
-const animatedWords = ['', 'ACHIEVE', 'PROWESS', 'EXCEL', 'TRIUMPH', 'DELIVER*'];
+const animatedWords = ['', 'ACHIEVE*', 'PROWESS*', 'EXCEL*', 'TRIUMPH*', 'DELIVER*'];
 
 export default function AboutTeamPage() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -58,16 +57,30 @@ export default function AboutTeamPage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -1 }}
               transition={{ duration: 0.2 }}
-              className="text-white font-monument-extended font-extrabold tracking-wide leading-[1] text-[11vw] md:text-[9vw] lg:text-[10vw]"
+              className="font-monument-extended font-extrabold tracking-wide leading-[1] text-[11vw] md:text-[9vw] lg:text-[10vw]"
             >
-              {animatedWords[currentWordIndex]}
+              {/* Split the word and apply red color to the asterisk */}
+              {animatedWords[currentWordIndex].includes('*') ? (
+                <>
+                  <span className="text-white">
+                    {animatedWords[currentWordIndex].split('*')[0]}
+                  </span>
+                  <span className="text-red">
+                    *
+                  </span>
+                </>
+              ) : (
+                <span className="text-white">
+                  {animatedWords[currentWordIndex]}
+                </span>
+              )}
             </motion.h1>
           </AnimatePresence>
 
           <motion.h4
             initial={{ opacity: 0, y: 1 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 5.6 }}
+            transition={{ duration: 0.6, delay: 5.0 }}
             className="text-[#FF0000] font-monument-extended font-extrabold tracking-widest leading-[1] text-[1.5vw] md:text-[1.7vw] lg:text-[1.6vw]"
           >
             * We dream of flight, design with might, and deliver sky-high delight !
