@@ -99,10 +99,12 @@ export default function WhoAreWeSection() {
             <div className="text-black z-10 relative">
               <div className="text-lg md:text-xl lg:text-3xl leading-relaxed pt-1 lg:pt-8 text-center lg:text-left">
                 <span className="text-[#FF0000] font-monument-extended font-ultrabold">Team Vimaanas Inc.</span>
-                <span className="text-black font-monument font-bold tracking-wider"> is a crew of visionary builders who turn dreams into micro-class RC planes that rule the skies.</span>
+                <span className="text-black font-monument font-bold tracking-wider">
+                  &nbsp;is a crew of visionary builders who turn dreams into micro-class RC planes that rule the skies.
+                </span>
               </div>
               <div className="mt-6 text-lg md:text-xl lg:text-3xl leading-relaxed text-black font-monument font-bold text-center lg:text-left">
-                With cutting-edge designs and a passion for precision, we deliver pint-sized powerhouses that defy gravity and expectations. From concept to takeoff, our hands-on hustle makes every build a masterpiece. Fueled by creativity and a love for flight, we're the ultimate wingmen of innovation!
+                With cutting-edge designs and a passion for precision, we deliver pint-sized powerhouses that defy gravity and expectations. From concept to takeoff, our hands-on hustle makes every build a masterpiece. Fueled by creativity and a love for flight, we&apos;re the ultimate wingmen of innovation!
               </div>
             </div>
 

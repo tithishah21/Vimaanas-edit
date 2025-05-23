@@ -120,10 +120,10 @@ export default function AimSection() {
         </div>
         
         <div className={`text-[#000000] font-monument-extended font-ultrabold text-md lg:text-[3.4rem] pt-5 lg:pt-20 ${isVisible ? 'quote-fade-in' : 'opacity-0'}`}>
-          "We don't stop when we get tired,
+        &quot;We don&apos;t stop when we get tired,
         </div>
         <div className={`text-[#FF0000] font-monument-extended font-ultrabold lg:text-[3.4rem] pb-5 lg:pb-20 ${isVisible ? 'quote-fade-in delay-1' : 'opacity-0'}`}>
-          we stop when we're done."
+        we stop when we&apos;re done.&quot;
         </div>
         
         {/*content*/}
@@ -143,7 +143,7 @@ export default function AimSection() {
           
           {/* Quote text - Right side */}
           <div className="text-black font-monument font-bold tracking-widest leading-relaxed z-10 relative text-lg md:text-xl lg:text-3xl font-monument text-center lg:text-right ml-10 lg:ml-0 mr-10 lg:mr-10 -translate-y-20 mt-24 lg:mt-2">
-            "We aim to soar above the rest, one aircraft at a time, while keeping the vibe light and the designs tight. We're not just here to glide through—we're out to drop jaws and lift spirits with every buzz of our mini masterpieces. So, buckle up—our little wings are ready to stir up some big turbulence."
+          &quot;We aim to soar above the rest, one aircraft at a time, while keeping the vibe light and the designs tight. We&apos;re not just here to glide through—we&apos;re out to drop jaws and lift spirits with every buzz of our mini masterpieces. So, buckle up—our little wings are ready to stir up some big turbulence.&quot;
           </div>
         </div>
       </section>
