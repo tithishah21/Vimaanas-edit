@@ -23,15 +23,15 @@ export default function ArchiveSection() {
           </div>
 
           {/* Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-48 place-items-center px-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-5 place-items-center px-0">
         {/* Card 1 */}
-        <div className="hidden lg:flex lg:flex-col lg:items-center lg:text-center lg:max-w-[36rem] text-black transition-transform duration-300 hover:-translate-y-2">
+        <div className="hidden lg:flex lg:flex-col lg:items-center lg:text-center lg:max-w-[48rem] text-black transition-transform duration-300 hover:-translate-y-2">
   <img
     src={FlyingLorry.src}
     alt="Flying Lorry"
-    className="w-full h-[400px] object-cover rounded-3xl "
+    className="w-full h-[500px] object-cover rounded-3xl "
   />
-  <p className="mt-4 text-base md:text-lg font-monument-extended font-semibold leading-relaxed">
+  <p className="mt-4 text-lg md:text-xl font-monument-extended font-semibold leading-relaxed">
     Our first Vimaan, the <span className="text-red font-semibold text-2xl">FLYING LORRY</span> was made mostly of thermocol,
     but its other components made it a really heavy plane. It was our first shot at SAE Aerodesign and getting 7th
     was a real boost to our team of enthusiastic founders.
@@ -52,13 +52,13 @@ export default function ArchiveSection() {
         </div>
 
         {/* Card 2 */}
-        <div className="hidden lg:flex lg:flex-col lg:items-center lg:text-center lg:max-w-[36rem] text-black transition-transform duration-300 hover:-translate-y-2">
+        <div className="hidden lg:flex lg:flex-col lg:items-center lg:text-center lg:max-w-[48rem] text-black transition-transform duration-300 hover:-translate-y-2">
   <img
     src={Vayuputra.src}
     alt="Vayuputra"
-    className="w-full h-[400px] object-cover rounded-3xl"
+    className="w-full h-[500px] object-cover rounded-3xl"
   />
-  <p className="mt-4 text-base md:text-lg font-monument-extended font-semibold leading-relaxed">
+  <p className="mt-4 text-lg md:text-xl font-monument-extended font-semibold leading-relaxed">
     <span className="text-red font-semibold text-2xl">VAYUPUTRA</span> our lightest plane weighing a stellar 180 grams.
     The first to get appreciated by <span className="text-red font-semibold">NASA</span> and bagging the 
     <span className="text-red font-semibold"> Systems Engineering Award</span>.
@@ -82,4 +82,3 @@ export default function ArchiveSection() {
       </section>
     );
   }
-  
