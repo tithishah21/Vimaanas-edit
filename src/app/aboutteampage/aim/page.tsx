@@ -1,7 +1,6 @@
 'use client';
 import Plane from "@/app/components/LandingPage/components/plane";
 import Image from "next/image";
-import PlaneImage from "./plane_image2.svg";
 import { useEffect, useState } from "react";
 
 export default function AimSection() {
@@ -133,7 +132,7 @@ export default function AimSection() {
           <div className="absolute inset-0 flex justify-center items-center z-0 opacity-20 lg:static lg:z-auto lg:opacity-100 lg:flex lg:justify-center lg:items-center">
             <div className={`transform ${isVisible ? 'plane-animation-left' : 'opacity-0'}`}>
               <Image
-                src={PlaneImage}
+                src="/assets/plane_image2.svg"
                 alt="Plane image"
                 width={900}
                 height={900}

@@ -1,27 +1,24 @@
 import Plane from "@/app/components/LandingPage/components/plane";
 import Image from "next/image";
-import Captain from "./captain.svg";
-import ViceCaptain from "./vicecaptain.svg";
-import Manager from "./manager.svg";
 
 export default function LeadershipSection() {
   const leaders = [
     {
-      image: Captain,
+      image: "/assets/captain.svg",
       title: "CAPTAIN",
       name: "C S S SHAURI",
       titleColor: "text-[#FF0000]",
       nameColor: "text-[#000000]"
     },
     {
-      image: ViceCaptain,
+      image: "/assets/vicecaptain.svg",
       title: "VICE CAPTAIN",
       name: "VAIBHAV DAVE",
       titleColor: "text-[#FF0000]",
       nameColor: "text-[#000000]"
     },
     {
-      image: Manager,
+      image: "/assets/manager.svg",
       title: "MANAGEMENT HEAD",
       name: "DONA MAXIN",
       titleColor: "text-[#FF0000]",

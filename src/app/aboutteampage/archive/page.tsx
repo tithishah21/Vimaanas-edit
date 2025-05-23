@@ -1,7 +1,6 @@
 import Plane from "@/app/components/LandingPage/components/plane";
 // import { StandardWobbleCard } from "@/app/components/About Team/wobblecard";
-import FlyingLorry from "./grouppic.svg";
-import Vayuputra from "./2013plane.svg";
+import Image from "next/image";
 
 export default function ArchiveSection() {
     return (
@@ -27,7 +26,7 @@ export default function ArchiveSection() {
         {/* Card 1 */}
         <div className="hidden lg:flex lg:flex-col lg:items-center lg:text-center lg:max-w-[48rem] text-black transition-transform duration-300 hover:-translate-y-2">
   <img
-    src={FlyingLorry.src}
+    src="/assets/grouppic.svg"
     alt="Flying Lorry"
     className="w-full h-[500px] object-cover rounded-3xl "
   />
@@ -40,7 +39,7 @@ export default function ArchiveSection() {
         {/*mobile view for 1st card*/}
         <div className="lg:hidden mx-2">
         <img
-            src={FlyingLorry.src}
+            src="/assets/grouppic.svg"
             alt="Flying Lorry"
             className="w-full h-[310px] object-cover rounded-3xl"
           />
@@ -54,7 +53,7 @@ export default function ArchiveSection() {
         {/* Card 2 */}
         <div className="hidden lg:flex lg:flex-col lg:items-center lg:text-center lg:max-w-[48rem] text-black transition-transform duration-300 hover:-translate-y-2">
   <img
-    src={Vayuputra.src}
+    src="/assets/2013plane.svg"
     alt="Vayuputra"
     className="w-full h-[500px] object-cover rounded-3xl"
   />
@@ -67,7 +66,7 @@ export default function ArchiveSection() {
         {/*mobile view for 2nd card*/}
         <div className="lg:hidden mx-2">
         <img
-            src={Vayuputra.src}
+            src="/assets/2013plane.svg"
             alt="Vayuputra"
             className="w-full h-[310px] object-cover"
           />

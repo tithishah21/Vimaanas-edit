@@ -1,11 +1,6 @@
 import Plane from "@/app/components/LandingPage/components/plane";
-import Ansys from "./ansys.svg";
-import Savox from "./savox.svg";
-import Scorpion from "./scorpion.svg";
-import Simscale from "./simscale.svg";
-import Solidworks from "./solidworks.svg";
-import Spektrum from "./spektrum.svg";
-import Tmotor from "./tmotor.svg";
+import Image from "next/image";
+
 
 export default function PartnersSection() {
   return (
@@ -27,13 +22,13 @@ export default function PartnersSection() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center w-[90%] max-w-7xl mx-auto">
-      <img src={Tmotor.src} alt="T-Motor" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
-      <img src={Solidworks.src} alt="SolidWorks" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
-      <img src={Simscale.src} alt="SimScale" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
-      <img src={Savox.src} alt="Savox" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
-      <img src={Spektrum.src} alt="Spektrum" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
-      <img src={Ansys.src} alt="Ansys" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
-      <img src={Scorpion.src} alt="Scorpion" className="lg:ml-[55rem] w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
+      <img src="/assets/tmotor.svg" alt="T-Motor" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
+      <img src="/assets/solidworks.svg" alt="SolidWorks" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
+      <img src="/assets/simscale.svg" alt="SimScale" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
+      <img src="/assets/savox.svg" alt="Savox" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
+      <img src="/assets/spektrum.svg" alt="Spektrum" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
+      <img src="/assets/ansys.svg" alt="Ansys" className="w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
+      <img src="/assets/scorpion.svg" alt="Scorpion" className="lg:ml-[55rem] w-60 lg:w-80 object-contain transition duration-300 transform hover:-translate-y-3" />
     </div>
 
     </section>
