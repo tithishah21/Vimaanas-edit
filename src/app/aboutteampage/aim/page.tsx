@@ -15,55 +15,45 @@ export default function AimSection() {
       },
       { threshold: 0.3 }
     );
-  
+
     const section = document.getElementById('aim-section');
     if (section) observer.observe(section);
-  
+
     return () => {
       const section = document.getElementById('aim-section');
       if (section) observer.unobserve(section);
     };
   }, []);
-  
 
   return (
     <>
       <style jsx>{`
-        @keyframes flyInFromLeft {
+        @keyframes flyInFromLeftMobile {
           0% {
-            transform: translateX(-100vw) translateY(-3.5vw) rotate(12deg) scale(1.3);
+            transform: translateX(-100vw) translateY(-4vh) rotate(12deg) scale(1.3);
             opacity: 0;
           }
           60% {
-            transform: translateX(8vw) translateY(-4vw) rotate(12deg) scale(1.3);
-            opacity: 1;
-          }
-          80% {
-            transform: translateX(7vw) translateY(-3.5vw) rotate(12deg) scale(1.3);
+            transform: translateX(20vw) translateY(-4vh) rotate(12deg) scale(1.3);
             opacity: 1;
           }
           100% {
-            /* Adjusted for mobile centering */
-            transform: translateX(2vw) translateY(-3.5vw) rotate(12deg) scale(1.3);
+            transform: translateX(25vw) translateY(-4vh) rotate(12deg) scale(1.3);
             opacity: 1;
           }
         }
 
         @keyframes flyInFromLeftDesktop {
           0% {
-            transform: translateX(-100vw) translateY(-6vw) rotate(12deg) scale(1.3);
+            transform: translateX(-100vw) translateY(-6vh) rotate(12deg) scale(1.3);
             opacity: 0;
           }
           60% {
-            transform: translateX(12vw) translateY(-6.5vw) rotate(12deg) scale(1.3);
-            opacity: 1;
-          }
-          80% {
-            transform: translateX(6vw) translateY(-6vw) rotate(12deg) scale(1.3);
+            transform: translateX(5vw) translateY(-6vh) rotate(12deg) scale(1.3);
             opacity: 1;
           }
           100% {
-            transform: translateX(3vw) translateY(-6vw) rotate(12deg) scale(1.3);
+            transform: translateX(10vw) translateY(-6vh) rotate(12deg) scale(1.3);
             opacity: 1;
           }
         }
@@ -79,8 +69,8 @@ export default function AimSection() {
           }
         }
 
-        .plane-animation-left {
-          animation: flyInFromLeft 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        .plane-animation {
+          animation: flyInFromLeftMobile 2.5s ease-out forwards;
         }
 
         .quote-fade-in {
@@ -93,8 +83,8 @@ export default function AimSection() {
         }
 
         @media (min-width: 1024px) {
-          .plane-animation-left {
-            animation: flyInFromLeftDesktop 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+          .plane-animation {
+            animation: flyInFromLeftDesktop 2.5s ease-out forwards;
           }
         }
       `}</style>
@@ -107,9 +97,11 @@ export default function AimSection() {
           <div className="absolute top-[70%] left-[40%] -translate-x-1/2 -translate-y-1/2 rotate-[85deg] blur-[2px] z-0">
             <Plane />
           </div>
+
           <div className="text-stroke-sm lg:text-stroke font-monument-extended font-ultrabold text-[8vw] md:text-[6vw] lg:text-[7.5vw] tracking-widest">
             WHAT WE AIM?
           </div>
+
           <div className="absolute flex font-monument-extended font-ultrabold text-[4vw] md:text-[2vw] lg:text-[3.4vw] tracking-widest top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-[0.5vw] z-30">
             <div className="text-[#000000]">WHAT</div>
             <div className="text-[#000000]">WE</div>
@@ -125,23 +117,22 @@ export default function AimSection() {
           we stop when we&apos;re done.&quot;
         </div>
 
-        {/* Content section */}
+        {/* Plane Image Section */}
         <div className="lg:grid lg:grid-cols-2 lg:gap-[4vw] lg:items-center relative">
-          {/* Plane image */}
-          {/* Adjusted the outer div for better centering on mobile */}
           <div className="absolute inset-0 flex justify-center items-center z-0 opacity-20 lg:static lg:z-auto lg:opacity-100 lg:flex">
-            <div className={`transform ${isVisible ? 'plane-animation-left' : 'opacity-0'}`}>
+            <div className={`transform ${isVisible ? 'plane-animation' : 'opacity-0'}`}>
               <Image
                 src="/assets/plane_image2.svg"
                 alt="Plane image"
                 width={900}
                 height={900}
                 priority
+                unoptimized
               />
             </div>
           </div>
 
-          {/* Quote text */}
+          {/* Quote Text Section */}
           <div className="text-black font-monument font-bold tracking-widest leading-relaxed z-10 relative text-[4vw] lg:text-[1.6vw] text-center lg:text-right px-[5vw] lg:px-0 mt-[12vw] lg:mt-[1vw] -translate-y-[5vw]">
             &quot;We aim to soar above the rest, one aircraft at a time, while keeping the vibe light and the designs tight. We&apos;re not just here to glide through—we&apos;re out to drop jaws and lift spirits with every buzz of our mini masterpieces. So, buckle up—our little wings are ready to stir up some big turbulence.&quot;
           </div>
