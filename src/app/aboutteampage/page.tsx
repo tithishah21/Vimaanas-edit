@@ -9,7 +9,6 @@ import LeadershipSection from './leadership/page';
 import PartnersSection from './partners/page';
 import FooterSection from './footer/page';
 
-
 const animatedWords = ['', 'ACHIEVE*', 'PROWESS*', 'EXCEL*', 'TRIUMPH*', 'DELIVER*'];
 
 export default function AboutTeamPage() {
@@ -29,7 +28,7 @@ export default function AboutTeamPage() {
       {/* HERO SECTION */}
       <section
         id="aboutteampage"
-        className="h-[300px] lg:h-[580px] w-full relative bg-bg text-white overflow-hidden flex justify-center px-3 pt-10"
+        className="h-[35vh] lg:h-[80vh] w-full relative bg-bg text-white overflow-hidden flex justify-center px-[3vw] pt-[5vh]"
       >
         <div className="text-left">
           <motion.h1
@@ -59,20 +58,15 @@ export default function AboutTeamPage() {
               transition={{ duration: 0.2 }}
               className="font-monument-extended font-extrabold tracking-wide leading-[1] text-[11vw] md:text-[9vw] lg:text-[10vw]"
             >
-              {/* Split the word and apply red color to the asterisk */}
               {animatedWords[currentWordIndex].includes('*') ? (
                 <>
                   <span className="text-white">
                     {animatedWords[currentWordIndex].split('*')[0]}
                   </span>
-                  <span className="text-red">
-                    *
-                  </span>
+                  <span className="text-red">*</span>
                 </>
               ) : (
-                <span className="text-white">
-                  {animatedWords[currentWordIndex]}
-                </span>
+                <span className="text-white">{animatedWords[currentWordIndex]}</span>
               )}
             </motion.h1>
           </AnimatePresence>
@@ -81,7 +75,7 @@ export default function AboutTeamPage() {
             initial={{ opacity: 0, y: 1 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 5.0 }}
-            className="text-[#FF0000] font-monument-extended font-extrabold tracking-widest leading-[1] text-[1.5vw] md:text-[1.7vw] lg:text-[1.6vw]"
+            className="text-[#FF0000] font-monument-extended font-extrabold tracking-widest leading-[1.2] text-[2.5vw] md:text-[1.8vw] lg:text-[1.6vw] mt-[1vh]"
           >
             * We dream of flight, design with might, and deliver sky-high delight !
           </motion.h4>
@@ -95,7 +89,6 @@ export default function AboutTeamPage() {
       <LeadershipSection />
       <PartnersSection />
       <FooterSection />
-
     </div>
   );
 }
