@@ -91,7 +91,7 @@ export default function AimSection() {
 
       <section
         id="aim-section"
-        className="relative w-full bg-[#FFFFFF] text-white flex flex-col items-center justify-center overflow-hidden z-20 pt-[10vw] pb-[10vw]"
+        className="relative w-full bg-[#FFFFFF] text-white flex flex-col items-center justify-center overflow-hidden z-20 pt-[10vw] pb-[4vw]"
       >
         <div className="relative w-full flex justify-center items-center z-20">
           <div className="absolute top-[70%] left-[40%] -translate-x-1/2 -translate-y-1/2 rotate-[85deg] blur-[2px] z-0">
