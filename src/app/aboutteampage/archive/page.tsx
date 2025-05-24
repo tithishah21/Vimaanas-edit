@@ -1,3 +1,5 @@
+"use client";
+
 import Plane from "@/app/components/LandingPage/components/plane";
 import Image from "next/image";
 
