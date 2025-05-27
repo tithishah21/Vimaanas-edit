@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Plane from "@/app/components/LandingPage/components/plane";
 import { useEffect, useState } from "react";
+import HeadingOverlay from "@/app/components/About Team/heading_overlay";
 
 export default function WhoAreWeSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -80,16 +81,13 @@ export default function WhoAreWeSection() {
       >
         {/* Heading */}
         <div className="relative w-full flex justify-center items-center z-20 mb-[0.3vh]">
-          <div className="absolute top-[70%] left-[35%] -translate-x-1/2 -translate-y-1/2 rotate-[85deg] blur-[2px] z-0">
+          <div className="absolute top-[70%] left-[40%] -translate-x-1/2 -translate-y-1/2 rotate-[85deg] blur-[2px] z-0">
             <Plane />
           </div>
-          <div className="text-stroke-sm lg:text-stroke font-monument-extended font-ultrabold text-[2.09rem] md:text-[5rem] lg:text-[8.2rem] tracking-widest">
-            WHO ARE WE?
-          </div>
-          <div className="absolute flex font-monument-extended font-ultrabold text-[1rem] md:text-[2rem] lg:text-[3vw] tracking-widest top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-[0.5rem] z-30">
-            <div className="text-[#FF0000]">ABOUT</div>
-            <div className="text-black">TEAM</div>
-          </div>
+          <HeadingOverlay 
+          backgroundText="WHO ARE WE"
+          redText="ABOUT"
+          blackText="TEAM" />
         </div>
 
         {/* Content */}

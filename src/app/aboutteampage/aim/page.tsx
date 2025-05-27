@@ -2,6 +2,7 @@
 import Plane from "@/app/components/LandingPage/components/plane";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import HeadingOverlay from "@/app/components/About Team/heading_overlay";
 
 export default function AimSection() {
   const [isVisible, setIsVisible] = useState(false);
