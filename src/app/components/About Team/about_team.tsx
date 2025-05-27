@@ -1,14 +1,14 @@
-"use client"; // Make sure this component is client-side
+"use client"; 
 
 import React from 'react';
-import { useRouter } from 'next/navigation'; // next/router if using pages router
-
+import { useRouter } from 'next/navigation'; 
 import 'react-toastify/dist/ReactToastify.css';
 import UturnArrow from "../LandingPage/components/uturn_arrow";
 import Plane from "../LandingPage/components/plane";
 import ZigZagArrow from "../LandingPage/components/zigziag_arrow";
 import ExploreAboutTeamButton from "../buttons/ExploreAboutTeamButton";
 import { StandardWobbleCard } from "./wobblecard";
+import HeadingOverlay from './heading_overlay';
 
 export const AboutTeam = () => {
   const router = useRouter();
@@ -32,13 +32,11 @@ export const AboutTeam = () => {
         <div className="absolute top-[70%] left-[33%] -translate-x-1/2 -translate-y-1/2 rotate-[85deg] blur-[2px] z-0">
           <Plane />
         </div>
-        <div className="text-stroke-sm lg:text-stroke font-monument-extended font-ultrabold text-[2.0625rem] md:text-7xl lg:text-9xl tracking-widest">
-          WHO ARE WE?
-        </div>
-        <div className="absolute flex font-monument-extended font-ultrabold text-lg md:text-4xl lg:text-6xl tracking-widest top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-3 z-30">
-          <div className="text-[#FF0000]">ABOUT</div>
-          <div className="text-[#000000]">TEAM</div>
-        </div>
+        <HeadingOverlay 
+          backgroundText='WHO ARE WE'
+          redText='ABOUT'
+          blackText='TEAM'
+        />
       </div>
       <div className="lg:flex w-full justify-center gap-28 mt-10 lg:mt-20 relative z-20 md:ml-20 lg:ml-0">
         <div className="relative h-auto lg:h-[30vw] w-[90vw] lg:w-[40vw] ml-5 sm:ml-0">
