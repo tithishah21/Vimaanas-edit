@@ -6,6 +6,7 @@ import UturnArrow from "../LandingPage/components/uturn_arrow";
 import Plane from "../LandingPage/components/plane";
 import ZigZagArrow from "../LandingPage/components/zigziag_arrow";
 import ExploreAboutTeamButton from "../buttons/ExploreAboutTeamButton";
+import HeadingOverlay from '../About Team/heading_overlay';
 
 export const Achievements = () => {
   const handleExploreClick = () => {
@@ -17,20 +18,17 @@ export const Achievements = () => {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      theme: 'dark', // Or 'light', 'colored' - adjust as needed
+      theme: 'dark', 
     });
   };
 
   return (
     <div id="achievements">
-      <div className="relative w-full lg:w-full flex justify-center items-center z-20 ">
-        <div className="text-stroke-sm lg:text-stroke font-monument-extended font-ultrabold text-3xl md:text-7xl lg:text-9xl tracking-widest">
-          ACHIEVEMENTS
-        </div>
-        <div className="absolute flex font-monument-extended font-ultrabold text-lg md:text-4xl lg:text-6xl tracking-widest top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 gap-3 z-30">
-          <div className="text-[#FF0000]">ACHIEVEMENTS</div>
-        </div>
-      </div>
+      <HeadingOverlay 
+      backgroundText='ACHIEVEMENTS'
+      redText='ACHIEVEMENTS'
+      blackText=''
+      />
       <div className="lg:flex w-full justify-center gap-28 mt-10 lg:mt-20 relative z-20 md:ml-20 lg:ml-0">
         <div className="absolute left-[2.3vw] lg:left-[2vw] top-[0.5%] lg:top-[0%] rotate-[265deg] lg:rotate-[250deg] filter grayscale brightness-[0.42] contrast-[1.2] z-50">
           <UturnArrow />

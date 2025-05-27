@@ -29,7 +29,7 @@ export const AboutTeam = () => {
         <ZigZagArrow />
       </div>
       <div className="relative w-full lg:w-full flex justify-center items-center z-20 ">
-        <div className="absolute top-[70%] left-[33%] -translate-x-1/2 -translate-y-1/2 rotate-[85deg] blur-[2px] z-0">
+        <div className="absolute top-[70%] left-[40%] -translate-x-1/2 -translate-y-1/2 rotate-[85deg] blur-[2px] z-0">
           <Plane />
         </div>
         <HeadingOverlay 
